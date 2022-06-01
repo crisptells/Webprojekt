@@ -12,15 +12,13 @@ function Instrument(props: any) {
     return(
      <Container>
 
-
-
         <Card
             sx={{
-                bgcolor: "orange"
+                bgcolor: "black"
             }}
         >
             <Grid container xs={12}>
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                     <CardMedia 
                     component="img"
                     sx={{
@@ -30,18 +28,6 @@ function Instrument(props: any) {
                     image={image}
                     />
                     </Grid>
-
-                <Grid item xs={6}>
-                    <p>{name}</p>
-                    <Button>
-                        <p>Yay!</p>
-                        <ThumbUpIcon />
-                    </Button>
-                    <Button>
-                        <p>Nay</p>
-                        <ThumbDownIcon />
-                    </Button>
-                </Grid>
             </Grid>
 
 
