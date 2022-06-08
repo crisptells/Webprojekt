@@ -14,9 +14,12 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import InfoIcon from '@mui/icons-material/Info';
+import { useNavigate } from 'react-router-dom';
 
 
-export default function AlignItemsList(props : any) {
+export default function AlignItemsList() {
+  
+  const navigate = useNavigate();
 
   return (
 
@@ -54,7 +57,7 @@ export default function AlignItemsList(props : any) {
               </Typography>
               {"E-Gitarre (T-Modell) - 150€"}
               <Stack direction="row" justifyContent="flex-end">
-              <IconButton color='primary' href={'http://localhost:3000/product-details'}>
+              <IconButton color='primary' onClick={() => navigate('/product-details')}>
                   <InfoIcon />
                 </IconButton>
               </Stack>
@@ -83,7 +86,7 @@ export default function AlignItemsList(props : any) {
               </Typography>
               {"E-Gitarre (T-Modell) - 99€"}
               <Stack direction="row" justifyContent="flex-end">
-              <IconButton color='primary' href={'http://localhost:3000/product-details'}>
+              <IconButton color='primary' onClick={() => navigate("/product-details")}>
                   <InfoIcon />
                 </IconButton>
               </Stack>
@@ -112,7 +115,7 @@ export default function AlignItemsList(props : any) {
               </Typography>
               {'E-Gitarre (ST-Modell) - 130€'}
               <Stack direction="row" justifyContent="flex-end">
-              <IconButton color='primary'>
+              <IconButton color='primary' onClick={() => navigate("/product-details")}>
                   <InfoIcon />
                 </IconButton>
               </Stack>
@@ -141,7 +144,7 @@ export default function AlignItemsList(props : any) {
               </Typography>
               {"Konzertgitarre - 60€"}
               <Stack direction="row" justifyContent="flex-end">
-              <IconButton color='primary'>
+              <IconButton color='primary' onClick={() => navigate("/product-details")}>
                   <InfoIcon />
                 </IconButton>
               </Stack>
@@ -170,7 +173,7 @@ export default function AlignItemsList(props : any) {
               </Typography>
               {"Konzertgitarre - 49€"}
               <Stack direction="row" justifyContent="flex-end">
-              <IconButton color='primary'>
+              <IconButton color='primary' onClick={() => navigate("/product-details")}>
                   <InfoIcon />
                 </IconButton>
               </Stack>
@@ -199,7 +202,7 @@ export default function AlignItemsList(props : any) {
               </Typography>
               {"Konzertgitarre - 75€"}
               <Stack direction="row" justifyContent="flex-end">
-                <IconButton color='primary'>
+                <IconButton color='primary' onClick={() => navigate("/product-details")}>
                   <InfoIcon />
                 </IconButton>
               </Stack>
