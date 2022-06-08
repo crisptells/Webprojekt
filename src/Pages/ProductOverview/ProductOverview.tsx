@@ -18,7 +18,6 @@ import InfoIcon from '@mui/icons-material/Info';
 
 export default function AlignItemsList(props : any) {
 
-
   return (
 
     <Container
@@ -55,7 +54,7 @@ export default function AlignItemsList(props : any) {
               </Typography>
               {"E-Gitarre (T-Modell) - 150€"}
               <Stack direction="row" justifyContent="flex-end">
-              <IconButton color='primary'>
+              <IconButton color='primary' href={'http://localhost:3000/product-details'}>
                   <InfoIcon />
                 </IconButton>
               </Stack>
@@ -84,7 +83,7 @@ export default function AlignItemsList(props : any) {
               </Typography>
               {"E-Gitarre (T-Modell) - 99€"}
               <Stack direction="row" justifyContent="flex-end">
-              <IconButton color='primary'>
+              <IconButton color='primary' href={'http://localhost:3000/product-details'}>
                   <InfoIcon />
                 </IconButton>
               </Stack>

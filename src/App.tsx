@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { Button, Container, Grid, Table } from '@mui/material'
+import { Container} from '@mui/material'
 import NavBar from './Components/NavBar'
 import Homepage from './Pages/Homepage/Homepage'
 import { Route, Routes } from 'react-router-dom'
 import ProductOverview from './Pages/ProductOverview/ProductOverview'
 import ProductDetails from './Pages/ProductDetails/ProductDetails'
+import Footer from './Components/Footer'
 
 
 function App() {
@@ -18,9 +19,9 @@ function App() {
         <Route path='/product-overview' element={<ProductOverview/>}/>
         <Route path='/product-details' element={<ProductDetails/>}/>
       </Routes>
+      <Footer/>
     </Container>
   )
-
 
 }
 
