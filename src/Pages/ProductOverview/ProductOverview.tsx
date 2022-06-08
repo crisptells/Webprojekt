@@ -6,18 +6,18 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import { Container, Grid } from '@mui/material';
+import { Container, Grid, IconButton } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import FilterListIcon from '@mui/icons-material/FilterList';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import InfoIcon from '@mui/icons-material/Info';
 
 
 export default function AlignItemsList(props : any) {
 
-    const {
-        text
-    } = props;
 
   return (
 
@@ -28,7 +28,7 @@ export default function AlignItemsList(props : any) {
     >
 
     <Stack spacing={2} direction="row" justifyContent="flex-end">
-      <Button variant="text">{text}</Button>
+      <Button href={'http://localhost:3000'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
       <Button variant="contained" startIcon={<FilterAltIcon />}>Filter</Button>
       <Button variant="contained" startIcon={<FilterListIcon />}>Order</Button>
     </Stack>
@@ -37,7 +37,7 @@ export default function AlignItemsList(props : any) {
     <List sx={{ width: '200%', maxWidth: 1110, bgcolor: 'background.paper' }}>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar sx={{width:100, height: 100}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" />
+          <Avatar sx={{width:150, height: 150}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" />
         </ListItemAvatar>
         <ListItemText
           primary="Harley Benton - TE-52"
@@ -49,11 +49,16 @@ export default function AlignItemsList(props : any) {
                 variant="body2"
                 color="text.primary"
               >
-                Größe: 1/8 <br/>
-                Korpus: Linde <br/>
-                Hals: Nato <br/>
+                Griffbrett: Ahorn <br/>
+                Korpus: amerikanische Esche <br/>
+                geschraubter Hals: kanadisher Ahorn <br/>
               </Typography>
-              {"E-Gitarre (T-Modell)"}
+              {"E-Gitarre (T-Modell) - 150€"}
+              <Stack direction="row" justifyContent="flex-end">
+              <IconButton color='primary'>
+                  <InfoIcon />
+                </IconButton>
+              </Stack>
             </React.Fragment>
           }
         />
@@ -61,7 +66,7 @@ export default function AlignItemsList(props : any) {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar sx={{width:100, height: 100}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" />
+          <Avatar sx={{width:150, height: 150}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/153580.jpg" />
         </ListItemAvatar>
         <ListItemText
           primary="Harley Benton - TE-30"
@@ -73,11 +78,16 @@ export default function AlignItemsList(props : any) {
                 variant="body2"
                 color="text.primary"
               >
-                Größe: 1/8 <br/>
-                Korpus: Linde <br/>
-                Hals: Nato <br/>
+                Griffbrett: Ahorn <br/>
+                Korpus: Esche <br/>
+                geschraubter Hals: Ahorn <br/>
               </Typography>
-              {"E-Gitarre (T-Modell)"}
+              {"E-Gitarre (T-Modell) - 99€"}
+              <Stack direction="row" justifyContent="flex-end">
+              <IconButton color='primary'>
+                  <InfoIcon />
+                </IconButton>
+              </Stack>
             </React.Fragment>
           }
         />
@@ -85,7 +95,7 @@ export default function AlignItemsList(props : any) {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-        <Avatar sx={{width:100, height: 100}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" />
+        <Avatar sx={{width:150, height: 150}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/511617.jpg" />
         </ListItemAvatar>
         <ListItemText
           primary="Jackson SLX DX"
@@ -97,11 +107,16 @@ export default function AlignItemsList(props : any) {
                 variant="body2"
                 color="text.primary"
               >
-                Größe: 1/8 <br/>
-                Korpus: Linde <br/>
-                Hals: Nato <br/>
+                Griffbrett: Lorbeer <br/>
+                Korpus: Pappel <br/>
+                Hals: Ahorn <br/>
               </Typography>
-              {'E-Gitarre (T-Modell)'}
+              {'E-Gitarre (ST-Modell) - 130€'}
+              <Stack direction="row" justifyContent="flex-end">
+              <IconButton color='primary'>
+                  <InfoIcon />
+                </IconButton>
+              </Stack>
             </React.Fragment>
           }
         />
@@ -109,7 +124,7 @@ export default function AlignItemsList(props : any) {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-        <Avatar sx={{width:100, height: 100}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" />
+        <Avatar sx={{width:150, height: 150}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/371679.jpg" />
         </ListItemAvatar>
         <ListItemText
           primary="Harley Benton - GL-2NT"
@@ -122,10 +137,15 @@ export default function AlignItemsList(props : any) {
                 color="text.primary"
               >
                 Größe: 1/8 <br/>
-                Korpus: Linde <br/>
-                Hals: Nato <br/>
+                Decke: Fichte <br/>
+                Korpus: Mahagoni <br/>
               </Typography>
-              {"E-Gitarre (T-Modell)"}
+              {"Konzertgitarre - 60€"}
+              <Stack direction="row" justifyContent="flex-end">
+              <IconButton color='primary'>
+                  <InfoIcon />
+                </IconButton>
+              </Stack>
             </React.Fragment>
           }
         />
@@ -133,7 +153,7 @@ export default function AlignItemsList(props : any) {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <img width={100} height={100} src='https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg'/>
+          <img width={150} height={150} src='https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/394726.jpg'/>
         </ListItemAvatar>
         <ListItemText
           primary="Startone CG-851"
@@ -149,7 +169,12 @@ export default function AlignItemsList(props : any) {
                 Korpus: Linde <br/>
                 Hals: Nato <br/>
               </Typography>
-              {"E-Gitarre (T-Modell)"}
+              {"Konzertgitarre - 49€"}
+              <Stack direction="row" justifyContent="flex-end">
+              <IconButton color='primary'>
+                  <InfoIcon />
+                </IconButton>
+              </Stack>
             </React.Fragment>
           }
         />
@@ -157,7 +182,7 @@ export default function AlignItemsList(props : any) {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar sx={{width:100, height: 100}} alt="E-Gitarre" src="https://cdn-icons-png.flaticon.com/512/96/96421.png" />
+          <Avatar sx={{width:150, height: 150}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/489975/15580910_800.jpg" />
         </ListItemAvatar>
         <ListItemText
           primary="Startone GitarLele"
@@ -173,7 +198,12 @@ export default function AlignItemsList(props : any) {
                 Korpus: Linde <br/>
                 Hals: Nato <br/>
               </Typography>
-              {"E-Gitarre (T-Modell)"}
+              {"Konzertgitarre - 75€"}
+              <Stack direction="row" justifyContent="flex-end">
+                <IconButton color='primary'>
+                  <InfoIcon />
+                </IconButton>
+              </Stack>
             </React.Fragment>
           }
         />

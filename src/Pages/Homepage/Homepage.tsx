@@ -32,6 +32,10 @@ function Homepage() {
       <Grid item xs={4}>
         <Instrument image="https://www.creativefabrica.com/wp-content/uploads/2020/05/13/guitar-in-the-circle-logo-Graphics-4113037-1.jpg"></Instrument>
       </Grid>
+
+      <Grid item xs={12} textAlign='center'>
+        <Button variant="contained" href={'http://localhost:3000/product-overview'}>Overview Page</Button>
+      </Grid>
       
       <Grid item xs={12} textAlign='center'>
         <p>Impressum | Kontakt | Help</p>
