@@ -7,8 +7,17 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { Container } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
-export default function AlignItemsList() {
+
+
+export default function AlignItemsList(props : any) {
+
+    const {
+        text
+    } = props;
+
   return (
 
     <Container
@@ -17,13 +26,20 @@ export default function AlignItemsList() {
       }}
     >
 
+    <Stack spacing={2} direction="row" justifyContent="flex-end">
+      <Button variant="text">{text}</Button>
+      <Button variant="outlined">Filter</Button>
+      <Button variant="outlined">Order</Button>
+    </Stack>
+
+
     <List sx={{ width: '100%', maxWidth: 1000, bgcolor: 'background.paper' }}>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Gitarre HX-20"
+          primary="Guitar HX-20"
           secondary={
             <React.Fragment>
               <Typography
