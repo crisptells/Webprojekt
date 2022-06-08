@@ -3,7 +3,8 @@ import { Button, Container, Grid, Table } from '@mui/material'
 import NavBar from './Components/NavBar'
 import Homepage from './Pages/Homepage/Homepage'
 import { Route, Routes } from 'react-router-dom'
-import Test from './Pages/Test'
+import ProductOverview from './Pages/ProductOverview/ProductOverview'
+import ProductDetails from './Pages/ProductDetails/ProductDetails'
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path='/' element={<Homepage/>}/>
-        <Route path='/test' element={<Test/>}/>
+        <Route path='/product-overview' element={<ProductOverview/>}/>
+        <Route path='/product-details' element={<ProductDetails/>}/>
       </Routes>
     </Container>
   )
