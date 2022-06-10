@@ -2,13 +2,10 @@ import { Button, Card, CardContent, Container, Grid, Typography, Avatar, List, D
 import React from 'react'
 import Instrument from '../../Components/Instrument'
 import './ProductDetails.css'
-<<<<<<< HEAD
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-=======
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
->>>>>>> 3788ee8631d32fd40afb45711454ce732b786827
 
 function ProductDetails() {
 

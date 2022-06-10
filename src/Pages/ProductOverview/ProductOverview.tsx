@@ -33,18 +33,21 @@ export default function AlignItemsList() {
 
       <Grid container spacing={2}>
 
-          <Grid item>
+          <Grid item xs={6}>
 
 
             <Stack spacing={2} direction="row" justifyContent={"flex-start"}>
              <Button href={'http://localhost:3000'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
             </Stack>
 
-            <Stack spacing={2} direction="row" justifyContent="flex-end">
+            
+          </Grid>
+
+          <Grid item xs={6}>
+          <Stack spacing={2} direction="row" justifyContent="flex-end">
               <Button variant="contained" startIcon={<FilterAltIcon />}>Filter</Button>
               <Button variant="contained" startIcon={<FilterListIcon />}>Order</Button>
             </Stack>
-
 
           </Grid>
 
