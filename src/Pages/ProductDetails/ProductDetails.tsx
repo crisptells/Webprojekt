@@ -2,7 +2,13 @@ import { Button, Card, CardContent, Container, Grid, Typography, Avatar, List, D
 import React from 'react'
 import Instrument from '../../Components/Instrument'
 import './ProductDetails.css'
+<<<<<<< HEAD
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+=======
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+>>>>>>> 3788ee8631d32fd40afb45711454ce732b786827
 
 function ProductDetails() {
 
@@ -12,7 +18,13 @@ function ProductDetails() {
       sx={{
         padding: "100px"
       }}>
-      
+
+      <Stack spacing={2} direction="row" justifyContent="flex-start">
+        <Button href={'http://localhost:3000/product-overview'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+      </Stack>
+    
+      <p> </p>
+
       <Grid container rowSpacing={1} columnSpacing={2}>
 
         <Grid item xs={8}>
@@ -130,6 +142,8 @@ function ProductDetails() {
           
         </Grid>        
       </Grid>
+
+      
 
     </Container>
   
