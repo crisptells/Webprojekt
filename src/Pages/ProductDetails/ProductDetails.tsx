@@ -2,6 +2,7 @@ import { Button, Card, CardContent, Container, Grid, Typography, Avatar, List, D
 import React from 'react'
 import Instrument from '../../Components/Instrument'
 import './ProductDetails.css'
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 function ProductDetails() {
 
@@ -120,10 +121,13 @@ function ProductDetails() {
                 </Typography>
                 </Grid>
               </Grid>
-
             </CardContent>
-
           </Card>
+          <p></p>
+          <Stack direction="column">
+            <Button variant="contained" color="success" size='large' endIcon={<ShoppingBagIcon />}>Bestellen</Button>
+          </Stack>
+          
         </Grid>        
       </Grid>
 
