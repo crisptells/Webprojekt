@@ -17,7 +17,6 @@ import InfoIcon from '@mui/icons-material/Info';
 import { useNavigate } from 'react-router-dom';
 import ListItemComponent from '../../Components/ListItemComponent';
 
-
 export default function AlignItemsList() {
   
   const navigate = useNavigate();
