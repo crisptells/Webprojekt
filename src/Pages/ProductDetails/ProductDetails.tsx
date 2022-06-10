@@ -1,13 +1,9 @@
 import { Button, Card, CardContent, Container, Grid, Typography, Avatar, List, Divider, IconButton, ListItem, ListItemAvatar, ListItemText, Stack } from '@mui/material'
-import React from 'react'
-import Instrument from '../../Components/Instrument'
-import './ProductDetails.css'
+import './ProductDetails.css';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-
-function ProductDetails() {
+function ProductInfo() {
 
   return (
 
@@ -26,65 +22,7 @@ function ProductDetails() {
 
         <Grid item xs={8}>
           <Card>
-          <List sx={{ maxWidth: 1110, bgcolor: 'background.paper' }}>
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar sx={{width:150, height: 150}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" />
-              </ListItemAvatar>
-              <ListItemText
-                primary="Harley Benton - TE-52"
-                secondary={
-                  <React.Fragment>
-                    <Typography
-                      sx={{ display: 'inline' }}
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                    >
-                      Griffbrett: Ahorn <br/>
-                      Korpus: amerikanische Esche <br/>
-                      geschraubter Hals: kanadisher Ahorn <br/>
-                    </Typography>
-                    {"E-Gitarre (T-Modell) - 150€"}
-                    <Stack direction="row" justifyContent="flex-end">
-                    <IconButton color='primary'>
-                        
-                      </IconButton>
-                    </Stack>
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar sx={{width:150, height: 150}} alt="E-Gitarre" src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/153580.jpg" />
-              </ListItemAvatar>
-              <ListItemText
-                primary="Harley Benton - TE-30"
-                secondary={
-                  <React.Fragment>
-                    <Typography
-                      sx={{ display: 'inline' }}
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                    >
-                      Griffbrett: Ahorn <br/>
-                      Korpus: Esche <br/>
-                      geschraubter Hals: Ahorn <br/>
-                    </Typography>
-                    {"E-Gitarre (T-Modell) - 99€"}
-                    <Stack direction="row" justifyContent="flex-end">
-                    <IconButton color='primary'>
-                        
-                      </IconButton>
-                    </Stack>
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-          </List>
+            Das ist das Produkt
           </Card>
         </Grid>
 
@@ -141,11 +79,10 @@ function ProductDetails() {
       </Grid>
 
       
-
     </Container>
   
   )
   
 }
   
-export default ProductDetails
+export default ProductInfo
