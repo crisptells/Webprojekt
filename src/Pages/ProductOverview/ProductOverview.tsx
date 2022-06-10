@@ -232,12 +232,6 @@ export default function AlignItemsList() {
       productName="Superflex HD" info1="info1" info2="info2" info3="info3" subtext="E-Gitarre Preis: 200000€"></ListItemComponent>
     </List>
 
-          <Grid container spacing={2}>
-            <Grid item xs={12} textAlign='center'>
-                <p>Impressum | Kontakt | Help</p>
-            </Grid>
-          </Grid>
-
     </Container>
   );
 }
