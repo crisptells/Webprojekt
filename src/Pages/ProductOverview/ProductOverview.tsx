@@ -15,6 +15,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import InfoIcon from '@mui/icons-material/Info';
 import { useNavigate } from 'react-router-dom';
+import ListItemComponent from '../../Components/ListItemComponent';
 
 
 export default function AlignItemsList() {
@@ -29,11 +30,28 @@ export default function AlignItemsList() {
       }}
     >
 
-    <Stack spacing={2} direction="row" justifyContent="flex-end">
-      <Button href={'http://localhost:3000'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
-      <Button variant="contained" startIcon={<FilterAltIcon />}>Filter</Button>
-      <Button variant="contained" startIcon={<FilterListIcon />}>Order</Button>
-    </Stack>
+
+      <Grid container spacing={2}>
+
+          <Grid item>
+
+
+            <Stack spacing={2} direction="row" justifyContent={"flex-start"}>
+             <Button href={'http://localhost:3000'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+            </Stack>
+
+            <Stack spacing={2} direction="row" justifyContent="flex-end">
+              <Button variant="contained" startIcon={<FilterAltIcon />}>Filter</Button>
+              <Button variant="contained" startIcon={<FilterListIcon />}>Order</Button>
+            </Stack>
+
+
+          </Grid>
+
+      </Grid>
+
+
+    
 
 
     <List sx={{ width: '200%', maxWidth: 1110, bgcolor: 'background.paper' }}>
@@ -210,6 +228,8 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
+      <ListItemComponent imgAlt="test" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/371679.jpg" 
+      productName="Superflex HD" info1="info1" info2="info2" info3="info3" subtext="E-Gitarre Preis: 200000€"></ListItemComponent>
     </List>
 
           <Grid container spacing={2}>
