@@ -2,6 +2,8 @@ import { Button, Card, CardContent, Container, Grid, Typography, Avatar, List, D
 import './ProductDetails.css';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import Instrument from '../../Components/Instrument';
+import ListItemComponent from '../../Components/ListItemComponent';
 
 function ProductInfo() {
 
@@ -22,7 +24,10 @@ function ProductInfo() {
 
         <Grid item xs={8}>
           <Card>
-            Das ist das Produkt
+          <ListItemComponent imgAlt="test" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/371679.jpg" 
+          productName="Superflex HD" info1="info1" info2="info2" info3="info3" subtext="E-Gitarre Preis: 200000€" line='false'>
+          </ListItemComponent>
+    
           </Card>
         </Grid>
 
@@ -37,7 +42,7 @@ function ProductInfo() {
                 </Grid>
                 <Grid item xs={6}>
                 <Typography sx={{ fontSize: 15 }} color="text.primary">
-                  2 Produkte 
+                  Gitarre
                 </Typography>
                 </Grid>
                 <Grid item xs={6}>
@@ -48,23 +53,12 @@ function ProductInfo() {
 
                 <Grid item xs={6}>
                 <Typography sx={{ fontSize: 15 }} color="text.primary">
-                  Lieferung 
-                </Typography>
-                </Grid>
-                <Grid item xs={6}>
-                <Typography sx={{ fontSize: 15 }} color="text.primary">
-                  € 10
-                </Typography>
-                </Grid>
-
-                <Grid item xs={6}>
-                <Typography sx={{ fontSize: 15 }} color="text.primary">
                   Gesamt 
                 </Typography>
                 </Grid>
                 <Grid item xs={6}>
                 <Typography sx={{ fontSize: 15 }} color="text.primary">
-                  € 260
+                  € 250
                 </Typography>
                 </Grid>
               </Grid>
@@ -72,7 +66,7 @@ function ProductInfo() {
           </Card>
           <p></p>
           <Stack direction="column">
-            <Button variant="contained" color="success" size='large' endIcon={<ShoppingBagIcon />}>Bestellen</Button>
+            <Button variant="contained" color="success" size='large' endIcon={<ShoppingBagIcon />}>In den Warenkorb</Button>
           </Stack>
           
         </Grid>        

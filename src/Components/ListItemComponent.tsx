@@ -9,7 +9,19 @@ import Typography from '@mui/material/Typography';
 import { Container, Grid, IconButton, Stack } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Line from './line';
 
+function line(props: any) {
+  const {
+    line
+  } = props;
+
+  if ({line}) {
+      <Divider variant="inset" component="li" />
+  } else {
+    
+  }
+}
 
 export default function ListItemComponent(props : any) {
 
@@ -23,15 +35,15 @@ export default function ListItemComponent(props : any) {
       info1,
       info2,
       info3,
-      subtext
+      subtext,
+      line
 
     } = props;
 
   return (
 
-    
     <>
-    <Divider variant="inset" component="li" />
+    <Line line={false} ></Line>
     <ListItem alignItems="flex-start">
       <ListItemAvatar>
         <Avatar sx={{ width: 150, height: 150 }} alt={imgAlt} src={imgSrc} />
