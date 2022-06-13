@@ -24,9 +24,9 @@ function ProductInfo() {
 
         <Grid item xs={8}>
           <Card>
-          <ListItemComponent imgAlt="test" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/371679.jpg" 
-          productName="Superflex HD" info1="info1" info2="info2" info3="info3" subtext="E-Gitarre Preis: 200000€" line='false'>
-          </ListItemComponent>
+          <ListItemComponent imgAlt="Harley Benton - TE-52" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" 
+            productName="Harley Benton - TE-52" info1="Griffbrett: Ahorn" info2="Korpus: amerikanische Esche" info3="geschraubter Hals: kanadisher Ahorn"
+            subtext="E-Gitarre (T-Modell) - 150€"></ListItemComponent>
     
           </Card>
         </Grid>
@@ -47,7 +47,7 @@ function ProductInfo() {
                 </Grid>
                 <Grid item xs={6}>
                 <Typography sx={{ fontSize: 15 }} color="text.primary">
-                  € 250
+                  € 150
                 </Typography>
                 </Grid>
 
@@ -58,7 +58,7 @@ function ProductInfo() {
                 </Grid>
                 <Grid item xs={6}>
                 <Typography sx={{ fontSize: 15 }} color="text.primary">
-                  € 250
+                  € 150
                 </Typography>
                 </Grid>
               </Grid>

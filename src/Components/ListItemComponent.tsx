@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import { Container, Grid, IconButton, Stack } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Line from './line';
+import Line from './Line';
 
 function line(props: any) {
   const {
@@ -43,7 +43,7 @@ export default function ListItemComponent(props : any) {
   return (
 
     <>
-    <Line line={false} ></Line>
+    
     <ListItem alignItems="flex-start">
       <ListItemAvatar>
         <Avatar sx={{ width: 150, height: 150 }} alt={imgAlt} src={imgSrc} />
@@ -69,8 +69,6 @@ export default function ListItemComponent(props : any) {
           </Stack>
         </React.Fragment>} />
     </ListItem></>
-
-    
     
    
   );
