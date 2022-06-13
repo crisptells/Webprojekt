@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import { blue } from '@mui/material/colors';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import FilterListIcon from '@mui/icons-material/FilterList';
-import { Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import RadioButtonsGroup from './RadioButtonGroup';
 import RatingComponent from './RatingComponent';
 import LabelComponent from './LabelComponent';
@@ -50,7 +50,15 @@ function SimpleDialog(props: SimpleDialogProps) {
         </Grid>
         <br/>
         <Grid item xs={12}>
-            <Button variant='contained'>Filter</Button>
+          <Container>
+            <br/>
+            <Button variant='contained'>Filtern</Button>
+          </Container>            
+        </Grid>
+        <Grid item xs={12}>
+          <Container>
+            <p></p>
+          </Container>            
         </Grid>
       </Grid>
     </Dialog>

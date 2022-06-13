@@ -7,6 +7,7 @@ import ProductOverview from './Pages/ProductOverview/ProductOverview'
 import Footer from './Components/Footer'
 import ProductDetilas from './Pages/ProductDetails/ProductDetails'
 import ShoppingCart from './Pages/ShoppingCart/ShoppingCart'
+import Account from './Pages/Account/Account'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/product-overview' element={<ProductOverview/>}/>
         <Route path='/shopping-cart' element={<ShoppingCart/>}/>
         <Route path='/product-details' element={<ProductDetilas/>}/>
+        <Route path='/account' element={<Account/>}/>
       </Routes>
       <Footer/>
     </Container>

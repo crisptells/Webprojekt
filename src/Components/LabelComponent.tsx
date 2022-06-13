@@ -12,7 +12,6 @@ export default function CheckboxLabels() {
             <br/>
             <FormControlLabel control={<Checkbox />} label="Konzertgittare" />
         </Container>
-      
     </FormGroup>
   );
 }

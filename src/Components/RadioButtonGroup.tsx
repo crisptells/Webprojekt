@@ -9,19 +9,17 @@ import { Container } from '@mui/material';
 export default function RadioButtonsGroup() {
   return (
     <FormControl>
-      <FormLabel id="demo-radio-buttons-group-label">Sortieren</FormLabel>
+      <Container>
+      <FormLabel id="demo-radio-buttons-group-label"></FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
         defaultValue="female"
         name="radio-buttons-group"
       >
-        <Container>
           <FormControlLabel value="guitarS" control={<Radio />} label="Aufwärts" />
-          <br/>
           <FormControlLabel value="guitarST" control={<Radio />} label="Abwärts" />
-        </Container>
-        
       </RadioGroup>
+      </Container>
     </FormControl>
   );
 }
