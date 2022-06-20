@@ -21,14 +21,20 @@ function Homepage() {
           <Instrument image="https://www.creativefabrica.com/wp-content/uploads/2020/05/13/guitar-in-the-circle-logo-Graphics-4113037-1.jpg"></Instrument>
         </Grid>
         <Grid item xs={4}>
-          <Instrument image="https://www.creativefabrica.com/wp-content/uploads/2020/05/13/guitar-in-the-circle-logo-Graphics-4113037-1.jpg"></Instrument>
+          <Instrument image="https://static.vecteezy.com/ti/gratis-vektor/p1/3346549-klavier-logo-vorlage-illustration-design-symbol-vektor.jpg"></Instrument>
         </Grid>
         <Grid item xs={4}>
-          <Instrument image="https://www.creativefabrica.com/wp-content/uploads/2020/05/13/guitar-in-the-circle-logo-Graphics-4113037-1.jpg"></Instrument>
+          <Instrument image="https://www.plot4u.de/images/artikel/0/000748w_x.jpg"></Instrument>
         </Grid>
 
-        <Grid item xs={12} textAlign='center'>
-          <Button variant="contained" href={'http://localhost:3000/product-overview-guitar'}>Overview Page</Button>
+        <Grid item xs={4} textAlign='center'>
+          <Button variant="contained" href={'http://localhost:3000/product-overview-guitar'}>Overview Page - Gitarren</Button>
+        </Grid>
+        <Grid item xs={4} textAlign='center'>
+          <Button variant="contained" href={'http://localhost:3000/product-overview-piano'}>Overview Page - Klavier</Button>
+        </Grid>
+        <Grid item xs={4} textAlign='center'>
+          <Button variant="contained" href={'http://localhost:3000/product-overview-drums'}>Overview Page - Schlagzeug</Button>
         </Grid>
       </Grid>
 

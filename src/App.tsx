@@ -9,6 +9,8 @@ import ProductDetilas from './Pages/ProductDetails/ProductDetails'
 import ShoppingCart from './Pages/ShoppingCart/ShoppingCart'
 import Account from './Pages/Account/Account'
 import ProductOverviewGuitar from './Pages/Guitar/ProductOverviewGuitar'
+import ProductOverviewPiano from './Pages/Piano/ProductOverviewPiano'
+import ProductOverviewDrums from './Pages/Drums/ProductOverviewDrums'
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Homepage/>}/>
         <Route path='/product-overview-guitar' element={<ProductOverviewGuitar/>}/>
+        <Route path='/product-overview-piano' element={<ProductOverviewPiano/>}/>
+        <Route path='/product-overview-drums' element={<ProductOverviewDrums/>}/>
         <Route path='/shopping-cart' element={<ShoppingCart/>}/>
         <Route path='/product-details' element={<ProductDetilas/>}/>
         <Route path='/account' element={<Account/>}/>

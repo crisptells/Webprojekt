@@ -15,7 +15,7 @@ function ProductInfo() {
       }}>
 
       <Stack spacing={2} direction="row" justifyContent="flex-start">
-        <Button href={'http://localhost:3000/product-overview'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+        <Button href={'http://localhost:3000/product-overview-guitar'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
       </Stack>
     
       <p> </p>
