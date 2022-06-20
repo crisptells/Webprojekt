@@ -11,7 +11,6 @@ function Account() {
 
   return (
 
-    
     <Container
       sx={{
         padding: "200px"
@@ -24,11 +23,17 @@ function Account() {
         </Stack>
         <br/>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={5}>
             <TextFieldComponent textField="E-Mail"></TextFieldComponent>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={7}>
+
+        </Grid>
+        <Grid item xs={5}>
             <TextFieldComponent textField="Passwort"></TextFieldComponent>
+        </Grid>
+        <Grid item xs={7}>
+            
         </Grid>
         <Grid item xs={1.5}>
             <Button variant="contained" startIcon={<LoginIcon />}>Anmelden</Button>

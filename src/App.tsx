@@ -8,6 +8,7 @@ import Footer from './Components/Footer'
 import ProductDetilas from './Pages/ProductDetails/ProductDetails'
 import ShoppingCart from './Pages/ShoppingCart/ShoppingCart'
 import Account from './Pages/Account/Account'
+import ProductOverviewGuitar from './Pages/Guitar/ProductOverviewGuitar'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path='/' element={<Homepage/>}/>
-        <Route path='/product-overview' element={<ProductOverview/>}/>
+        <Route path='/product-overview-guitar' element={<ProductOverviewGuitar/>}/>
         <Route path='/shopping-cart' element={<ShoppingCart/>}/>
         <Route path='/product-details' element={<ProductDetilas/>}/>
         <Route path='/account' element={<Account/>}/>

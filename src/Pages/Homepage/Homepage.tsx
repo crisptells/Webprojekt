@@ -28,7 +28,7 @@ function Homepage() {
         </Grid>
 
         <Grid item xs={12} textAlign='center'>
-          <Button variant="contained" href={'http://localhost:3000/product-overview'}>Overview Page</Button>
+          <Button variant="contained" href={'http://localhost:3000/product-overview-guitar'}>Overview Page</Button>
         </Grid>
       </Grid>
 

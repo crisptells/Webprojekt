@@ -16,6 +16,7 @@ export default function InputWithIcon(props:any) {
   return (
     <Box sx={{ '& > :not(style)': { m: 1 } }}>
       <TextField
+        fullWidth
         id="input-with-icon-textfield"
         label={textField}
         InputProps={{
