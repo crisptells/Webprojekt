@@ -212,6 +212,7 @@ export default function PrimarySearchAppBar() {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
+              href='http://localhost:3000/account'
             >
               <AccountCircle />
             </IconButton>
