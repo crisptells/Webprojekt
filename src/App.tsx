@@ -11,6 +11,8 @@ import Account from './Pages/Account/Account'
 import ProductOverviewGuitar from './Pages/Guitar/ProductOverviewGuitar'
 import ProductOverviewPiano from './Pages/Piano/ProductOverviewPiano'
 import ProductOverviewDrums from './Pages/Drums/ProductOverviewDrums'
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 function App() {

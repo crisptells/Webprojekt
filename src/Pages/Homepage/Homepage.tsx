@@ -1,10 +1,17 @@
 import { useState } from 'react'
 import Instrument from '../../Components/Instrument'
 import { Button, Container, Grid, Table } from '@mui/material'
+import { useQuery } from "react-query"
 
 
 function Homepage() {
   const [count, setCount] = useState(0)
+
+  const {data: instrumentsData}:any = useQuery("instruments", () => 
+  fetch('http://localhost:8080/instruments').then((res)=>res.json())
+);
+
+console.log({instrumentsData})
 
   return (
     <Container
@@ -24,7 +31,7 @@ function Homepage() {
           <Instrument image="https://static.vecteezy.com/ti/gratis-vektor/p1/3346549-klavier-logo-vorlage-illustration-design-symbol-vektor.jpg"></Instrument>
         </Grid>
         <Grid item xs={4}>
-          <Instrument image="https://www.plot4u.de/images/artikel/0/000748w_x.jpg"></Instrument>
+        <Instrument image="https://www.plot4u.de/images/artikel/0/000748w_x.jpg"></Instrument>    
         </Grid>
 
         <Grid item xs={4} textAlign='center'>
@@ -43,3 +50,5 @@ function Homepage() {
 }
 
 export default Homepage
+
+

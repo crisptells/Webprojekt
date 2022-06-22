@@ -17,6 +17,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom';
 
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -42,6 +43,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
 }));
+
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
@@ -123,7 +125,7 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
+      <MenuItem> 
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
             <MailIcon />
@@ -236,3 +238,4 @@ export default function PrimarySearchAppBar() {
     </Box>
   );
 }
+
