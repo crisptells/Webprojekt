@@ -31,7 +31,7 @@ export default function AdminAddInstrument() {
       }}
     >
       
-      <Button>Instrument Hinzufügen :,)</Button>
+      <Button>Instrument Hinzufügen</Button>
 
     </Container>
   );

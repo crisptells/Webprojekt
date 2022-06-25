@@ -15,6 +15,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Admin from './Pages/AdminPage/Admin'
 import AdminAllInstruments from './Pages/AdminAllInstruments/AdminAllInstruments'
 import AdminAllBookedInstruments from './Pages/AdminAllBookedInstruments/AdminAllBookedInstruments'
+import AdminAddInstrument from './Pages/AdminAddInstrument/AdminAddInstrument'
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path='/admin' element={<Admin/>}/>
         <Route path='/admin/AllInstruments' element={<AdminAllInstruments/>}/>
         <Route path='/admin/AllBookedInstruments' element={<AdminAllBookedInstruments/>}/>
+        <Route path='/admin/AddInstrument' element={<AdminAddInstrument/>}/>
       </Routes>
       <Footer/>
     </Container>

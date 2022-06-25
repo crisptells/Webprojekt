@@ -27,7 +27,7 @@ function Admin() {
             </a>
         </Grid>
         <Grid item xs={4}>
-            <a href='http://localhost:3000/admin/AllBookedInstruments'>
+            <a href='http://localhost:3000/admin/AddInstrument'>
                 <ComplexButton buttonText="INSTRUMENT HINZUFÜGEN"></ComplexButton>
             </a>
         </Grid>
