@@ -80,7 +80,7 @@ export default function ButtonBases(props: any) {
     
     const images = [
         {
-          url: {buttonImg},
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8dpo8UvgzoGUx-AVWXO75oCBsa1nxcUVw8Q&usqp=CAU',   //{buttonImg}, funktioniert nicht :()
           title: {buttonText},
           width: '100%',
         },

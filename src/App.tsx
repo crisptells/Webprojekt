@@ -13,6 +13,8 @@ import ProductOverviewPiano from './Pages/Piano/ProductOverviewPiano'
 import ProductOverviewDrums from './Pages/Drums/ProductOverviewDrums'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Admin from './Pages/AdminPage/Admin'
+import AdminAllInstruments from './Pages/AdminAllInstruments/AdminAllInstruments'
+import AdminAllBookedInstruments from './Pages/AdminAllBookedInstruments/AdminAllBookedInstruments'
 
 
 
@@ -31,6 +33,8 @@ function App() {
         <Route path='/product-details' element={<ProductDetilas/>}/>
         <Route path='/account' element={<Account/>}/>
         <Route path='/admin' element={<Admin/>}/>
+        <Route path='/admin/AllInstruments' element={<AdminAllInstruments/>}/>
+        <Route path='/admin/AllBookedInstruments' element={<AdminAllBookedInstruments/>}/>
       </Routes>
       <Footer/>
     </Container>

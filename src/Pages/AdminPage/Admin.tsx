@@ -17,13 +17,19 @@ function Admin() {
 
       <Grid container spacing={2}>
         <Grid item xs={4}>
-            <ComplexButton buttonText="ALLE INSTRUMENTE"></ComplexButton>
+            <a href='http://localhost:3000/admin/AllInstruments'>
+                <ComplexButton buttonText="ALLE INSTRUMENTE"></ComplexButton>
+            </a>
         </Grid>
         <Grid item xs={4}>
-            <ComplexButton buttonText="AUSGELIEHENE INSTRUMENTE"></ComplexButton>
+            <a href='http://localhost:3000/admin/AllInstruments'>
+                <ComplexButton buttonText="AUSGELIEHENE INSTRUMENTE"></ComplexButton>
+            </a>
         </Grid>
         <Grid item xs={4}>
-            <ComplexButton buttonText="INSTRUMENT HINZUFÜGEN"></ComplexButton>
+            <a href='http://localhost:3000/admin/AllBookedInstruments'>
+                <ComplexButton buttonText="INSTRUMENT HINZUFÜGEN"></ComplexButton>
+            </a>
         </Grid>
       </Grid>
 
