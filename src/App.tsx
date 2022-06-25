@@ -12,6 +12,7 @@ import ProductOverviewGuitar from './Pages/Guitar/ProductOverviewGuitar'
 import ProductOverviewPiano from './Pages/Piano/ProductOverviewPiano'
 import ProductOverviewDrums from './Pages/Drums/ProductOverviewDrums'
 import "bootstrap/dist/css/bootstrap.min.css";
+import Admin from './Pages/AdminPage/Admin'
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/shopping-cart' element={<ShoppingCart/>}/>
         <Route path='/product-details' element={<ProductDetilas/>}/>
         <Route path='/account' element={<Account/>}/>
+        <Route path='/admin' element={<Admin/>}/>
       </Routes>
       <Footer/>
     </Container>
