@@ -80,7 +80,6 @@ export default function ButtonBases(props: any) {
     
     const images = [
         {
-          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8dpo8UvgzoGUx-AVWXO75oCBsa1nxcUVw8Q&usqp=CAU',   //{buttonImg}, funktioniert nicht :()
           title: {buttonText},
           width: '100%',
         },
@@ -97,7 +96,7 @@ export default function ButtonBases(props: any) {
             width: image.width,
           }}
         >
-          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+          <ImageSrc style={{ backgroundImage: `url(${buttonImg})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
             <Typography
