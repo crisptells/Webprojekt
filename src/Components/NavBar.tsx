@@ -212,7 +212,7 @@ export default function PrimarySearchAppBar() {
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              //onClick={handleProfileMenuOpen}
               color="inherit"
               href='http://localhost:3000/account'
             >
