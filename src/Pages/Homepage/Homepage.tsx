@@ -32,7 +32,7 @@ function Homepage() {
         </Grid>
         <Grid item xs={4}>
           <a href='http://localhost:3000/product-overview-drums'>
-          <ComplexButton buttonText="SCHLAGZEUG" buttonImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_s7-PLlsIlnAcaMovOausyKkmDHVv1S9AA&usqp=CAU'></ComplexButton>
+          <ComplexButton buttonText="SCHLAGZEUGE" buttonImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_s7-PLlsIlnAcaMovOausyKkmDHVv1S9AA&usqp=CAU'></ComplexButton>
           </a>
         </Grid>
           
