@@ -48,38 +48,38 @@ export default function AlignItemsList() {
     
     <List sx={{ width: '200%', maxWidth: 1110, bgcolor: 'background.paper' }}>
       <Card>
-      <ListItemComponent imgAlt="Harley Benton - TE-52" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" 
-        productName="Harley Benton - TE-52" info1="Griffbrett: Ahorn" info2="Korpus: amerikanische Esche" info3="geschraubter Hals: kanadisher Ahorn"
+      <ListItemComponent title="Harley Benton - TE-52" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" 
+        productName="Harley Benton - TE-52" description="Griffbrett: Ahorn" info2="Korpus: amerikanische Esche" info3="geschraubter Hals: kanadisher Ahorn"
         subtext="E-Gitarre (T-Modell) - 150€"></ListItemComponent>
       </Card>
       <br/>
       <Card>
-      <ListItemComponent imgAlt="Harley Benton - TE-30" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/153580.jpg" 
-        productName="Harley Benton - TE-30" info1="Griffbrett: Ahorn" info2="Korpus: Esche" info3="geschraubter Hals: Ahorn"
+      <ListItemComponent title="Harley Benton - TE-30" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/153580.jpg" 
+        productName="Harley Benton - TE-30" description="Griffbrett: Ahorn" info2="Korpus: Esche" info3="geschraubter Hals: Ahorn"
         subtext="E-Gitarre (T-Modell) - 99€"></ListItemComponent>
       </Card>
       <br/>
       <Card>
-      <ListItemComponent imgAlt="Jackson SLX DX" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/511617.jpg" 
-        productName="Jackson SLX DX" info1="Griffbrett: Lorbeer" info2="Korpus: Pappel" info3="Hals: Ahorn"
+      <ListItemComponent title="Jackson SLX DX" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/511617.jpg" 
+        productName="Jackson SLX DX" description="Griffbrett: Lorbeer" info2="Korpus: Pappel" info3="Hals: Ahorn"
         subtext="E-Gitarre (ST-Modell) - 130€"></ListItemComponent>
       </Card>
       <br/>
       <Card>
-      <ListItemComponent imgAlt="Harley Benton - GL-2NT" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/371679.jpg" 
-        productName="Harley Benton - GL-2NT" info1="Größe: 1/8 " info2="Decke: Fichte" info3="Korpus: Mahagoni"
+      <ListItemComponent title="Harley Benton - GL-2NT" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/371679.jpg" 
+        productName="Harley Benton - GL-2NT" description="Größe: 1/8 " info2="Decke: Fichte" info3="Korpus: Mahagoni"
         subtext="Konzertgitarre - 60€"></ListItemComponent>
       </Card>
       <br/>
       <Card>
-      <ListItemComponent imgAlt="Startone CG-851" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/394726.jpg" 
-        productName="Startone CG-851" info1="Größe: 1/8" info2="Korpus: Linde" info3="Hals: Nato"
+      <ListItemComponent title="Startone CG-851" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/394726.jpg" 
+        productName="Startone CG-851" description="Größe: 1/8" info2="Korpus: Linde" info3="Hals: Nato"
         subtext="Konzertgitarre - 75€"></ListItemComponent>
       </Card>
       <br/>
       <Card>
-      <ListItemComponent imgAlt="Startone GitarLele" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/371679.jpg" 
-        productName="Startone GitarLele" info1="Größe: 1/8" info2="Korpus: Linde" info3="Hals: Nato"
+      <ListItemComponent title="Startone GitarLele" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/371679.jpg" 
+        productName="Startone GitarLele" description="Größe: 1/8" info2="Korpus: Linde" info3="Hals: Nato"
         subtext="Konzertgitarre - 75€"></ListItemComponent>
       </Card>
 

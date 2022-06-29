@@ -6,7 +6,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import { Container, Grid, IconButton, Stack } from '@mui/material';
+import { Button, Container, Grid, IconButton, Stack } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Line from './Line';
@@ -29,14 +29,11 @@ export default function ListItemComponent(props : any) {
 
     const {
 
-      imgAlt,
+      title,
       imgSrc,
-      productName,
-      info1,
-      info2,
-      info3,
-      subtext,
-      line
+      description,
+      price,
+      category
 
     } = props;
 
@@ -46,10 +43,10 @@ export default function ListItemComponent(props : any) {
     
     <ListItem alignItems="flex-start">
       <ListItemAvatar>
-        <Avatar sx={{ width: 150, height: 150 }} alt={imgAlt} src={imgSrc} />
+        <Avatar sx={{ width: 150, height: 150 }} alt={title} src={imgSrc} />
       </ListItemAvatar>
       <ListItemText
-        primary={productName}
+        primary={title}
         secondary={<React.Fragment>
           <Typography
             sx={{ display: 'inline' }}
@@ -57,15 +54,23 @@ export default function ListItemComponent(props : any) {
             variant="body2"
             color="text.primary"
           >
-            {info1} <br />
-            {info2} <br />
-            {info3} <br />
+            {description} <br />
+            {category} <br />
           </Typography>
-          {subtext}
+          text
           <Stack direction="row" justifyContent="flex-end">
-            <IconButton color='primary' onClick={() => navigate('/product-details')}>
-              <InfoIcon />
-            </IconButton>
+            <Grid>
+              <Stack>
+              <Grid item xs={12}>
+                <h3>{price}</h3>
+              </Grid>
+              </Stack>
+              
+              <Grid item xs={12}>
+                <Button variant="contained" color="success" size='large' onClick={() => navigate('/product-details')} endIcon={<InfoIcon />}>Mehr Inforamtionen</Button>
+              </Grid>           
+            </Grid>
+            
           </Stack>
         </React.Fragment>} />
     </ListItem></>

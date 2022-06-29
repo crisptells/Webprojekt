@@ -12,6 +12,8 @@ function Homepage() {
   fetch('http://localhost:8080/instruments').then((res)=>res.json())
 );
 
+
+
 console.log({instrumentsData})
 
   return (
@@ -40,6 +42,7 @@ console.log({instrumentsData})
           <ComplexButton buttonText="SCHLAGZEUG" buttonImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_s7-PLlsIlnAcaMovOausyKkmDHVv1S9AA&usqp=CAU'></ComplexButton>
           </a>
         </Grid>
+        
       </Grid>
 
     </Container>
