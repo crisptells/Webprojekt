@@ -8,12 +8,11 @@ function InstumentsTable(props: any){
 
         
 
-        <Grid container rowSpacing={5}  className='ausleiheGrid'>
+        <Grid container rowSpacing={5}  className="instruments">
 
-            {instrumentsData?.map((entry : any) => entry.category.toLowerCase().includes(filter.toLowerCase()) && (
-                <Grid item key={entry.title} xs={12} sm={12} md={12} lg={12}>
-                    <ListItemComponent title={entry.title} subtitle={entry.category} link={entry.id} picture={entry.mainPicture}/>
-                    
+            {instrumentsData?.map((entry : any) => (
+                <Grid item key={entry.title} xs={12} sm={12} md={12} lg={12} className="instrument">
+                    <ListItemComponent title={entry.title} description={entry.description} category={entry.category} price={entry.price} pictureLink={entry.pictureLink}/>
                 </Grid>
             ))}
 

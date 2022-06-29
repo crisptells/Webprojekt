@@ -30,7 +30,7 @@ export default function ListItemComponent(props : any) {
     const {
 
       title,
-      imgSrc,
+      pictureLink,
       description,
       price,
       category
@@ -43,7 +43,7 @@ export default function ListItemComponent(props : any) {
     
     <ListItem alignItems="flex-start">
       <ListItemAvatar>
-        <Avatar sx={{ width: 150, height: 150 }} alt={title} src={imgSrc} />
+        <Avatar sx={{ width: 150, height: 150 }} alt={title} src={pictureLink} />
       </ListItemAvatar>
       <ListItemText
         primary={title}
@@ -54,10 +54,10 @@ export default function ListItemComponent(props : any) {
             variant="body2"
             color="text.primary"
           >
-            {description} <br />
             {category} <br />
+            {description} <br />
           </Typography>
-          text
+          {price}
           <Stack direction="row" justifyContent="flex-end">
             <Grid>
               <Stack>

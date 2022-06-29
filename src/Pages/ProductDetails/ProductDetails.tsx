@@ -24,9 +24,9 @@ function ProductInfo() {
 
         <Grid item xs={8}>
           <Card>
-          <ListItemComponent imgAlt="Harley Benton - TE-52" imgSrc="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" 
-            productName="Harley Benton - TE-52" info1="Griffbrett: Ahorn" info2="Korpus: amerikanische Esche" info3="geschraubter Hals: kanadisher Ahorn"
-            subtext="E-Gitarre (T-Modell) - 150€"></ListItemComponent>
+          <ListItemComponent title="Harley Benton - TE-52" pictureLink="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" 
+            description="Korpus: amerikanische Esche" category="E-Gitarre (T-Modell)" 
+            price="150€"></ListItemComponent>
     
           </Card>
         </Grid>

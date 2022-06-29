@@ -3,6 +3,7 @@ import Instrument from '../../Components/Instrument'
 import { Button, Container, Grid, Table } from '@mui/material'
 import { useQuery } from "react-query"
 import ComplexButton from '../../Components/ComplexButton'
+import InstrumentsTable from '../../Components/InstrumentsTable'
 
 
 function Homepage() {
@@ -11,7 +12,6 @@ function Homepage() {
   const {data: instrumentsData}:any = useQuery("instruments", () => 
   fetch('http://localhost:8080/instruments').then((res)=>res.json())
 );
-
 
 
 console.log({instrumentsData})
@@ -42,7 +42,7 @@ console.log({instrumentsData})
           <ComplexButton buttonText="SCHLAGZEUG" buttonImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_s7-PLlsIlnAcaMovOausyKkmDHVv1S9AA&usqp=CAU'></ComplexButton>
           </a>
         </Grid>
-        
+          
       </Grid>
 
     </Container>
