@@ -10,7 +10,7 @@ function CarouselItemBox(props: any) {
     return(
         <Card>
             <img src={image}></img>
-        </Card>
+        </Card> 
     )
 }
 
