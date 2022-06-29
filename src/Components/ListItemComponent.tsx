@@ -62,7 +62,7 @@ export default function ListItemComponent(props : any) {
             <Grid>
               <Stack>
               <Grid item xs={12}>
-                <h3>{price}</h3>
+                <h3>{price}€</h3>
               </Grid>
               </Stack>
               

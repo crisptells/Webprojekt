@@ -7,14 +7,7 @@ import InstrumentsTable from '../../Components/InstrumentsTable'
 
 
 function Homepage() {
-  const [count, setCount] = useState(0)
-
-  const {data: instrumentsData}:any = useQuery("instruments", () => 
-  fetch('http://localhost:8080/instruments').then((res)=>res.json())
-);
-
-
-console.log({instrumentsData})
+  const [count, setCount] = useState(0);
 
   return (
     <Container

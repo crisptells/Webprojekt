@@ -19,10 +19,15 @@ import ListItemComponent from '../../Components/ListItemComponent';
 import DialogSort from '../../Components/DialogSort';
 import DialogFilter from '../../Components/DialogFilter';
 import InstrumentsTable from '../../Components/InstrumentsTable';
+import { useQuery } from 'react-query';
 
 export default function AlignItemsList() {
   
   const navigate = useNavigate();
+
+  const {data: instrumentsData}:any = useQuery("instruments", () => 
+  fetch('http://localhost:8080/instruments').then((res)=>res.json())
+);
 
   return (
 
@@ -47,7 +52,7 @@ export default function AlignItemsList() {
           </Grid>
       </Grid>
     
-      <InstrumentsTable></InstrumentsTable>
+      <InstrumentsTable instrumentsData={instrumentsData}></InstrumentsTable>
 
     </Container>
   );
