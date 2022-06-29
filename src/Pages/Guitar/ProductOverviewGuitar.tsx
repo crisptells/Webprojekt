@@ -26,8 +26,9 @@ export default function AlignItemsList() {
   const navigate = useNavigate();
 
   const {data: instrumentsData}:any = useQuery("instruments", () => 
-  fetch('http://localhost:8080/instruments').then((res)=>res.json())
+  fetch('http://localhost:8080/instruments/getAllType/Gitarre').then((res)=>res.json())
 );
+
 
   return (
 

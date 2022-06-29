@@ -18,10 +18,16 @@ import { useNavigate } from 'react-router-dom';
 import ListItemComponent from '../../Components/ListItemComponent';
 import DialogSort from '../../Components/DialogSort';
 import DialogFilter from '../../Components/DialogFilter';
+import { useQuery } from 'react-query';
+import InstrumentsTable from '../../Components/InstrumentsTable';
 
 export default function AlignItemsList() {
   
   const navigate = useNavigate();
+
+  const {data: instrumentsData}:any = useQuery("instruments", () => 
+  fetch('http://localhost:8080/instruments/getAllType/Schlaginstrument').then((res)=>res.json())
+);
 
   return (
 
@@ -46,33 +52,7 @@ export default function AlignItemsList() {
           </Grid>
       </Grid>
     
-    <List sx={{ width: '200%', maxWidth: 1110, bgcolor: 'background.paper' }}>
-      <Card>
-      <ListItemComponent imgAlt="Mapex Venus Fusion" imgSrc="https://www.kirstein.de/out/pictures/generated/product/1/1150_760_75/1a11060987c7ff49c024fd9ffacc9329_1.jpg" 
-        productName="Mapex Venus Fusion" info1="Komplettes 5-teiliges Schlagzeug Set" info2="Mit kompletter Hardware" info3="Farbe: Steel Blue Metallic"
-        subtext="Schlagzeug Komplett-Sets - 250€"></ListItemComponent>
-      </Card>
-      <br/>
-      <Card>
-      <ListItemComponent imgAlt="Mapex Venus Fusion" imgSrc="https://www.kirstein.de/out/pictures/generated/product/1/1150_760_75/1a11060987c7ff49c024fd9ffacc9329_1.jpg" 
-        productName="Mapex Venus Fusion" info1="Komplettes 5-teiliges Schlagzeug Set" info2="Mit kompletter Hardware" info3="Farbe: Steel Blue Metallic"
-        subtext="Schlagzeug Komplett-Sets - 250€"></ListItemComponent>
-      </Card>
-      <br/>
-      <Card>
-      <ListItemComponent imgAlt="Mapex Venus Fusion" imgSrc="https://www.kirstein.de/out/pictures/generated/product/1/1150_760_75/1a11060987c7ff49c024fd9ffacc9329_1.jpg" 
-        productName="Mapex Venus Fusion" info1="Komplettes 5-teiliges Schlagzeug Set" info2="Mit kompletter Hardware" info3="Farbe: Steel Blue Metallic"
-        subtext="Schlagzeug Komplett-Sets - 250€"></ListItemComponent>
-      </Card>
-      <br/>
-      <Card>
-      <ListItemComponent imgAlt="Mapex Venus Fusion" imgSrc="https://www.kirstein.de/out/pictures/generated/product/1/1150_760_75/1a11060987c7ff49c024fd9ffacc9329_1.jpg" 
-        productName="Mapex Venus Fusion" info1="Komplettes 5-teiliges Schlagzeug Set" info2="Mit kompletter Hardware" info3="Farbe: Steel Blue Metallic"
-        subtext="Schlagzeug Komplett-Sets - 250€"></ListItemComponent>
-      </Card>
-            
-
-    </List>
+      <InstrumentsTable instrumentsData={instrumentsData}></InstrumentsTable>
 
     </Container>
   );

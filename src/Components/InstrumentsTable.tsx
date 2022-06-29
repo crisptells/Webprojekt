@@ -12,7 +12,7 @@ function InstumentsTable(props: any){
 
                 {instrumentsData?.map((entry : any) => (
              <Grid item key={entry.title} xs={12} sm={12} md={12} lg={12} className="instrument">
-                <ListItemComponent title={entry.title} description={entry.description} category={entry.category} price={entry.price} pictureLink={entry.pictureLink}/>
+                <ListItemComponent title={entry.name} description={entry.description} category={entry.category} price={entry.price} pictureLink={entry.pictureLink}/>
             </Grid>
                 ))}
 
