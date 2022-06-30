@@ -43,7 +43,7 @@ export default function ListItemComponent(props : any) {
     
     <ListItem alignItems="flex-start">
       <ListItemAvatar>
-        <Avatar sx={{ width: 150, height: 150 }} alt={title} src={pictureLink} />
+       <Avatar sx={{ width: 150, height: 150 }} alt={title} src={pictureLink} />
       </ListItemAvatar>
       <ListItemText
         primary={title}
@@ -57,7 +57,6 @@ export default function ListItemComponent(props : any) {
             {category} <br />
             {description} <br />
           </Typography>
-          {price}
           <Stack direction="row" justifyContent="flex-end">
             <Grid>
               <Stack>

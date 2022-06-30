@@ -35,7 +35,6 @@ function Homepage() {
           <ComplexButton buttonText="SCHLAGZEUGE" buttonImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_s7-PLlsIlnAcaMovOausyKkmDHVv1S9AA&usqp=CAU'></ComplexButton>
           </a>
         </Grid>
-          
       </Grid>
 
     </Container>

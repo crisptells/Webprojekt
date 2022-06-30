@@ -26,7 +26,7 @@ function ProductInfo() {
           <Card>
           <ListItemComponent title="Harley Benton - TE-52" pictureLink="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" 
             description="Korpus: amerikanische Esche" category="E-Gitarre (T-Modell)" 
-            price="150€"></ListItemComponent>
+            price="150"></ListItemComponent>
     
           </Card>
         </Grid>

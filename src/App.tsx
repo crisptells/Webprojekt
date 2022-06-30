@@ -16,6 +16,8 @@ import Admin from './Pages/AdminPage/Admin'
 import AdminAllInstruments from './Pages/AdminAllInstruments/AdminAllInstruments'
 import AdminAllBookedInstruments from './Pages/AdminAllBookedInstruments/AdminAllBookedInstruments'
 import AdminAddInstrument from './Pages/AdminAddInstrument/AdminAddInstrument'
+import SignIn from './Pages/SignIn/SignIn'
+import SignUp from './Pages/SignUp/SignUp'
 
 
 
@@ -37,6 +39,8 @@ function App() {
         <Route path='/admin/AllInstruments' element={<AdminAllInstruments/>}/>
         <Route path='/admin/AllBookedInstruments' element={<AdminAllBookedInstruments/>}/>
         <Route path='/admin/AddInstrument' element={<AdminAddInstrument/>}/>
+        <Route path='/signin' element={<SignIn/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
       </Routes>
       <Footer/>
     </Container>

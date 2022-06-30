@@ -103,8 +103,7 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={() => navigate('/account')}>Profil</MenuItem>
-      <MenuItem onClick={() => navigate('/account')}>My account</MenuItem>
+      
     </Menu>
   );
 
@@ -192,20 +191,7 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+           
             <IconButton
               size="large"
               edge="end"
@@ -214,7 +200,7 @@ export default function PrimarySearchAppBar() {
               aria-haspopup="true"
               //onClick={handleProfileMenuOpen}
               color="inherit"
-              href='http://localhost:3000/account'
+              href='http://localhost:3000/signin'
             >
               <AccountCircle />
             </IconButton>
