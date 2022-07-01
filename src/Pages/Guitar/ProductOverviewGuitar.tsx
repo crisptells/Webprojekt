@@ -30,6 +30,7 @@ export default function AlignItemsList() {
 );
 
 
+
   return (
 
     <Container
@@ -37,7 +38,8 @@ export default function AlignItemsList() {
         padding: "100px"
       }}
     >
-      
+
+
       <Grid container spacing={2}>
           <Grid item xs={6}>
             <Stack spacing={2} direction="row" justifyContent={"flex-start"}>

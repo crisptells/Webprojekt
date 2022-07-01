@@ -4,8 +4,21 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Instrument from '../../Components/Instrument';
 import ListItemComponent from '../../Components/ListItemComponent';
+import InstrumentsTable from '../../Components/InstrumentsTable';
+import { useNavigate } from 'react-router-dom';
+import { useQuery } from 'react-query';
+import ShoppingCardTable from '../../Components/ShoppingCardTable';
+
 
 function ProductInfo() {
+
+  const navigate = useNavigate();
+
+  const {data: instrumentsData}:any = useQuery("instruments", () => 
+  fetch('http://localhost:8080/instruments/getAllType/RENT').then((res)=>res.json())
+  
+);
+
 
   return (
 
@@ -17,19 +30,20 @@ function ProductInfo() {
       <Stack spacing={2} direction="row" justifyContent="flex-start">
         <Button href={'http://localhost:3000/product-overview-guitar'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
       </Stack>
+
+      
     
       <p> </p>
 
-      <Grid container rowSpacing={1} columnSpacing={2}>
+
+      <Grid container columnSpacing={2}>
 
         <Grid item xs={8}>
-          <Card>
-          <ListItemComponent title="Harley Benton - TE-52" pictureLink="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/prod/223985.jpg" 
-            description="Korpus: amerikanische Esche" category="E-Gitarre (T-Modell)" 
-            price="150"></ListItemComponent>
-    
-          </Card>
+         <ShoppingCardTable instrumentsData={instrumentsData}></ShoppingCardTable>
         </Grid>
+  
+   
+        
 
         <Grid item xs={4}>
           <Card >
@@ -66,11 +80,14 @@ function ProductInfo() {
           </Card>
           <p></p>
           <Stack direction="column">
-            <Button variant="contained" color="success" size='large' endIcon={<ShoppingBagIcon />}>In den Warenkorb</Button>
+            <Button variant="contained" color="success" size='large' endIcon={<ShoppingBagIcon />}>Zur Kasse</Button>
           </Stack>
           
-        </Grid>        
-      </Grid>
+        </Grid>
+
+        </Grid>
+             
+      
 
       
     </Container>
