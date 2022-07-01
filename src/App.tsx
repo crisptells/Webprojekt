@@ -18,6 +18,7 @@ import AdminAllBookedInstruments from './Pages/AdminAllBookedInstruments/AdminAl
 import AdminAddInstrument from './Pages/AdminAddInstrument/AdminAddInstrument'
 import SignIn from './Pages/SignIn/SignIn'
 import SignUp from './Pages/SignUp/SignUp'
+import TestCheckout from './Pages/Test/TestCheckout'
 
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route path='/admin/AddInstrument' element={<AdminAddInstrument/>}/>
         <Route path='/signin' element={<SignIn/>}/>
         <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/test' element={<TestCheckout/>}/>
       </Routes>
       <Footer/>
     </Container>
