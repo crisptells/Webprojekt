@@ -28,10 +28,15 @@ const bookInstrument = async () => {
   const requestOptions = {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({}),
+    body: JSON.stringify({
+      userId: user,
+      instrumentId : instrument.instrumentId,
+      bookingDate : today.toISOString().substring(0, 10),
+      bookingDuration : 30
+    }),
   };
 
-  const response = await fetch(`http://localhost:8080/instruments/book/${instrument.instrumentId}/${user}/${today.toISOString().substring(0,10)}/${duration}`, requestOptions);
+  const response = await fetch(`http://localhost:8080/instruments/book`, requestOptions);
       if (!response.ok) {
         console.log("response war nicht ok :( ")
         setError({ isError: true, msg: `Fehler: ${response.statusText}` });
