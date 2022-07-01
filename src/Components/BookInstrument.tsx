@@ -20,6 +20,7 @@ function ManageCheckout(props: any) {
 const bookInstrument = async () => {
   
   const today : Date = new Date();
+  const duration : number = 30;
   let returnDate : Date = new Date();
   returnDate.setDate(returnDate.getDate() + 30);
   let success: boolean = false;
@@ -27,16 +28,10 @@ const bookInstrument = async () => {
   const requestOptions = {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      user_id: user,
-      instrumentId: instrument.instrumentId,
-      bookingDate: today,
-      bookingDuration: 30,
-      
-    }),
+    body: JSON.stringify({}),
   };
 
-  const response = await fetch('http://localhost:8080/instruments/book', requestOptions);
+  const response = await fetch(`http://localhost:8080/instruments/book/${instrument.instrumentId}/${user}/${today.toISOString().substring(0,10)}/${duration}`, requestOptions);
       if (!response.ok) {
         console.log("response war nicht ok :( ")
         setError({ isError: true, msg: `Fehler: ${response.statusText}` });

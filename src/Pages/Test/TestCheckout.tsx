@@ -6,7 +6,7 @@ function TestCheckout() {
     const instrument = {
         name : "Instrument",
         category : "test",
-        instrumentId: "b033804b-a725-4370-a142-111c17f46248"
+        instrumentId: "7b9dc776-c3a6-4203-aece-53879bcd1c62"
     }
 
   return (
