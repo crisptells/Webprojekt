@@ -4,10 +4,13 @@ import TextFieldComponent from '../../Components/TextFieldComponent';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import LoginIcon from '@mui/icons-material/Login';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+import { useNavigate } from "react-router-dom";
 
 
 
 function Kontakt() {
+
+  const navigate = useNavigate();
 
   return (
 
@@ -19,7 +22,7 @@ function Kontakt() {
 <Grid container spacing={2}>
         <Grid item xs={12}>
         <Stack spacing={2} direction="row" justifyContent={"flex-start"}>
-             <Button href={'http://localhost:3000'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+             <Button onClick={() => navigate('/')} color="inherit" variant="outlined" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
         </Stack>
       </Grid>
 
