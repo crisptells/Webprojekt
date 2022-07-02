@@ -81,8 +81,8 @@ export default function ListItemComponent(props : any) {
               </Stack>
               
               <Grid item xs={12}>
-                <Button variant="contained" color="success" size='large' onClick={() => navigate('/product-details')} endIcon={<InfoIcon />}>Mehr Inforamtionen</Button>
-              </Grid>           
+                <Button variant="contained" color="success" size='large' onClick={() => navigate('/shopping-cart')} endIcon={<InfoIcon />}>Mehr Inforamtionen</Button>
+              </Grid>       
             </Grid>
             
           </Stack>

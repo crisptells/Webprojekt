@@ -29,7 +29,6 @@ export default function SignIn() {
 
     const [userName, setUserName] = useState("");
     const [userPassword, setUserPassword] = useState("");
-    const apiUlr = `http://localhost:8080/login`;
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState({isError: false, msg: "No Error"});
     const {
@@ -54,11 +53,11 @@ export default function SignIn() {
             method: "PUT",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                username: userName,
-                passwordHash: md5(userPassword),
+                userName: "Admin",
+                password: "passwort",
             }),
         };
-        const response = await fetch(apiUlr, requestOptions);
+        const response = await fetch('http://localhost:8080/users/login', requestOptions);
         if (!response.ok) {
             setError({isError: true, msg: `Fehler: ${response.statusText}`});
         } else if (response.ok) {

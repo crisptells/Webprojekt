@@ -30,8 +30,6 @@ function SignUp() {
       control,
     } = useForm();
   
-    const apiUrlAll = `http://localhost:8080/registration`;
-  
     const redirectToHome = () => {
       navigate("/");
     };
@@ -42,36 +40,34 @@ function SignUp() {
   
     const handleSubmitClick = async () => {
       let redirectHome: boolean = false;
-      setIsLoading(true);
+      
   
       if (password === confirmPassword) {
         const requestOptions = {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            username: userName,
+            userName: userName,
             firstName: firstName,
             name: lastName,
             email: email,
-            passwordHash: md5(password),
-            passwordConfirmHash: md5(confirmPassword),
-            street: street,
-            number: number,
-            plz: parseInt(plz),
-            city: city,
+            password: password,
+            confirmPassword: confirmPassword,            
           }),
         };
-        const response = await fetch(apiUrlAll, requestOptions);
+        const response = await fetch(`http://localhost:8080/users/register`, requestOptions);
         if (!response.ok) {
+          console.log("nicht okay!")
           setError({ isError: true, msg: `Fehler: ${response.statusText}` });
           setAgree(false);
         } else if (response.ok) {
+          console.log("okay!")
           const data: any = await response.json();
           setError({ isError: false, msg: "No error" });
           setCookie("userId", data.id, 7);
           redirectHome = true;
         }
-        setIsLoading(false);
+        
         if (redirectHome) {
           redirectToHome();
         }
@@ -81,12 +77,11 @@ function SignUp() {
           msg: "Fehler: Das eingegebene Passwort stimmt nicht mit dem zur Überprüfung überein!",
         });
       }
-      setIsLoading(false);
+      
     };
-    if (isLoading)
-      return (<p>Loading</p>
-      );
   
+    
+
     function checkboxHandler() {
       setAgree(!agree);
     }
@@ -248,13 +243,6 @@ function SignUp() {
                             <Controller
                             name="password"
                             control={control}
-                            rules={{
-                                required: true,
-                                minLength: 7,
-                                maxLength: 32,
-                                pattern:
-                                /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[-!@#\$%\^&\*])(?=.{7,})?/i, //eslint-disable-line no-useless-escape
-                            }}
                             render={({ field }) => (
                                 <TextField
                                 {...field}
@@ -278,13 +266,7 @@ function SignUp() {
                             )}
                             />
 
-                            {errors.password && (
-                            <small>
-                                Bitte geben Sie eine gültiges Password ein! Anforderungen:
-                                mind. 7 Zeichen, ein Großbuchstabe, ein Kleinbuchstabe, eine
-                                Zahl und ein Sonderzeichen.
-                            </small>
-                            )}
+                            
                         </Grid>
                         <Grid item xs={12}>
                             <Controller
@@ -318,122 +300,15 @@ function SignUp() {
                                 />
                             )}
                             />
-                        </Grid>
-                            <Grid item xs={8}>
-                            <Controller
-                                name="street"
-                                control={control}
-                                rules={{ required: true, minLength: 3 }}
-                                render={({ field }) => (
-                                <TextField
-                                    {...field}
-                                    required
-                                    fullWidth
-                                    label="Straße"
-                                    value={street}
-                                    onChange={(e: any) => {
-                                    setStreet(e.target.value);
-                                    setValue("street", e.target.value);
-                                    return;
-                                    }}
-                                    InputLabelProps={{
-                                      style: {
-                                        color: "black"
-                                      }
-                                    }}
-                                />
-                                )}
-                            />
-                            </Grid>
-                            <Grid item xs={4}>
-                            <Controller
-                                name="number"
-                                control={control}
-                                rules={{ required: true, minLength: 1 }}
-                                render={({ field }) => (
-                                <TextField
-                                    {...field}
-                                    required
-                                    fullWidth
-                                    label="Hausnummer"
-                                    value={number}
-                                    onChange={(e: any) => {
-                                    setNumber(e.target.value);
-                                    setValue("number", e.target.value);
-                                    return;
-                                    }}
-                                    InputLabelProps={{
-                                      style: {
-                                        color: "black"
-                                      }
-                                    }}
-                                />
-                                )}
-                            />
-                            </Grid>
-                        <Grid item xs={4}>
-                            <Controller
-                            name="PLZ"
-                            control={control}
-                            rules={{
-                                required: true,
-                                minLength: 5,
-                                maxLength: 5,
-                            }}
-                            render={({ field }) => (
-                                <TextField
-                                {...field}
-                                required
-                                fullWidth
-                                label="PLZ"
-                                value={plz}
-                                onChange={(e: any) => {
-                                    setPlz(e.target.value);
-                                    setValue("PLZ", e.target.value);
-                                    return;
-                                }}
-                                InputLabelProps={{
-                                  style: {
-                                    color: "black"
-                                  }
-                                }}
-                                />
-                            )}
-                            />
-                        </Grid>
-                        <Grid item xs={8}>
-                            <Controller
-                            name="city"
-                            control={control}
-                            rules={{ required: true, minLength: 3 }}
-                            render={({ field }) => (
-                                <TextField
-                                {...field}
-                                required
-                                fullWidth
-                                label="Ort"
-                                value={city}
-                                onChange={(e: any) => {
-                                    setCity(e.target.value);
-                                    setValue("city", e.target.value);
-                                    return;
-                                }}
-                                InputLabelProps={{
-                                  style: {
-                                    color: "black"
-                                  }
-                                }}
-                                />
-                            )}
-                            />{" "}
+                            {" "}
                             {error.isError && (
                             <small style={{ color: "red" }}>
                                 Ein Fehler ist aufgetreten. Bitte überprüfen Sie ihre
-                                Eingaben. Bei technischen Problemen wenden Sie sich bitte an
-                                den Admin dieser Website. {error.msg}
+                                Eingaben. {error.msg}
                             </small>
                             )}
                         </Grid>
+                          
 
                         <Grid item xs={12}>
                             <input
@@ -443,15 +318,13 @@ function SignUp() {
                             />
                             <label style={{color: "#65615a"}}>
                             {" "}
-                                 Ich möchte Inspiration, Marketingaktionen und Updates per E-Mail erhalten.
+                                 Ich möchte einen E-Mail Newsletter erhalten.
                             </label>
                         </Grid>
 
                         <Grid item xs={12}>
                             <input type="checkbox" id="agree" onChange={checkboxHandler} />
-                            <label htmlFor="agree" style={{color: "#65615a"}}>  Ich stimme den </label>
-                            <Link sx={{color: "#65615a"}} onClick={redirectToTerms}> Allgemeinen Geschäftsbedingungen (AGBs) </Link>
-                            <label style={{color: "#65615a"}}> zu.</label>
+                            <label htmlFor="agree" style={{color: "#65615a"}}>  Ich stimme den Allgemeinen Geschäftsbedingungen (AGBs) zu. </label>
                         </Grid>
                         </Grid>
                         <Button
@@ -460,7 +333,7 @@ function SignUp() {
                         type="submit"
                         fullWidth
                         variant="contained"
-                        onClick={handleSubmit(handleSubmitClick)}
+                        onClick={handleSubmitClick}
                         color="primary"
                         sx={{ mt: 3, mb: 2 }}
                         >

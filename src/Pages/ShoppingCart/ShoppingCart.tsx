@@ -30,7 +30,7 @@ function ShoppingCard() {
       }}>
 
       <Stack spacing={2} direction="row" justifyContent="flex-start">
-        <Button href={'http://localhost:3000/product-details'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+        <Button onClick={() => navigate(-1)} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
       </Stack>
     
       <p> </p>

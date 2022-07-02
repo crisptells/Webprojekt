@@ -34,9 +34,24 @@ function ProductInfo() {
         <Button onClick={() => navigate(-1)} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
       </Stack>
 
-      <Stack spacing={2} direction="row" justifyContent="flex-start">
-        
-      </Stack>
+      <Grid container spacing={2}>
+        <Grid item>
+          <Stack spacing={2} direction="row" justifyContent="flex-start">
+          <Avatar
+            alt="Remy Sharp"
+            src="/static/images/avatar/1.jpg"
+            sx={{ width: 24, height: 24 }}
+            />
+          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+          <Avatar
+          alt="Remy Sharp"
+          src="/static/images/avatar/1.jpg"
+          sx={{ width: 56, height: 56 }}
+          />
+          </Stack>
+        </Grid>
+      </Grid>
+      
 
       <Stack spacing={2} direction="row" justifyContent="flex-end">
         <Button variant="contained" startIcon={<ShoppingCartIcon />}>In den Warenkorb</Button>
