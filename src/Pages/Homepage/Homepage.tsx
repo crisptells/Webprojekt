@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import Instrument from '../../Components/Instrument'
-import { Button, Container, Grid, Table } from '@mui/material'
+import { Button, Container, Grid, Stack, Table } from '@mui/material'
 import { useQuery } from "react-query"
 import ComplexButton from '../../Components/ComplexButton'
 import InstrumentsTable from '../../Components/InstrumentsTable'
 import DataButton from '../../Components/DataButton'
-
+import '../../Pages/Homepage/Homepage.css'
 
 function Homepage() {
   const [count, setCount] = useState(0);
@@ -19,7 +19,14 @@ function Homepage() {
       
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Instrument image="https://lifestyle-decor.de/images/product_images/original_images/Autodekor-Musik-Notenschluessel.png.png"></Instrument>
+          <Stack justifyContent={"center"} alignContent={"center"} alignItems={"center"} >
+          <h1>Ivan's Instrumentenverleih</h1>
+          </Stack>
+        </Grid>
+        <Grid item xs={12}>
+          <Stack justifyContent={"center"} alignContent={"center"} alignItems={"center"} >
+           <img src="https://www.ivanpreabianca.com/img/logo.png" width={400} height={400}></img>
+          </Stack>
         </Grid>
         <Grid item xs={4}>
           <a href='http://localhost:3000/product-overview-guitar'>
