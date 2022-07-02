@@ -8,12 +8,6 @@ import { render } from "react-dom";
 
 export default function DataButton(props : any) {
 
-    const navigate = useNavigate();
-
-    const {data: instrumentsData}:any = useQuery("instruments", () => 
-    fetch('http://localhost:8080/instruments').then((res)=>res.json())
-    );
-
       
     const {
 
@@ -24,7 +18,10 @@ export default function DataButton(props : any) {
     
     return (
         
-        <Link to="/shopping-cart" state={instrument}></Link>
-
-    );
+        
+            <Link to="/shopping-cart" state={instrument}>hier</Link>
+        
+        
+        
+    )
 }

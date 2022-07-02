@@ -7,10 +7,12 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { Button, Container, Grid, IconButton, Stack } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Line from './Line';
 import { CategorySharp, Description } from '@mui/icons-material';
+import {setCookie} from "../CookieHandler";
+import { useForm } from 'react-hook-form';
 
 
 function line(props: any) {
@@ -49,8 +51,8 @@ export default function ShoppingCardItem(props : any) {
             })}
         </div>);
     };
-    
-    
+
+        
 
   return (
 
@@ -70,7 +72,7 @@ export default function ShoppingCardItem(props : any) {
             color="text.primary"
           >
             {category} 
-            {render()} 
+            {render()}
           </Typography>
           <Stack direction="row" justifyContent="flex-end">
             <h3>{price}€</h3>            

@@ -7,11 +7,12 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { Button, Container, Grid, IconButton, Stack } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Line from './Line';
 import { CategorySharp, Description } from '@mui/icons-material';
 import DataButton from './DataButton';
+import { useForm } from 'react-hook-form';
 
 
 function line(props: any) {
@@ -29,10 +30,50 @@ function line(props: any) {
 
 export default function ListItemComponent(props : any) {
 
+  const {
+    setValue,
+    handleSubmit,
+    formState: {errors},
+    control,
+  } = useForm();
+
+  const {
+
+    userId,
+    instrumentId
+
+  } = props;
+  
+/**
+    "userId" : "c83a10db-004f-4d40-acae-a491dd7e986d",
+    "instrumentId" : "bc190294-c77e-462e-8887-258ac3570c2d" 
+ */
+
+  const handleSubmitClick = async () => {
+  
+    console.log(userId);
+    console.log(instrumentId);
+    const requestOptions = {
+        method: "PUT",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          userId : {userId},
+          instrumentId : {instrumentId}
+        }),
+    };
+    const response = await fetch('http://localhost:8080/instruments/putInCart', requestOptions);
+    if (!response.ok) {
+      console.log("nicht ok")
+    } else if (response.ok) {
+        const data: any = await response.json();
+        console.log("ok")
+    }
+  };
+
     const navigate = useNavigate();
 
     const {
-
+      
       title,
       pictureLink,
       description,
@@ -90,8 +131,7 @@ export default function ListItemComponent(props : any) {
               </Stack>
               
               <Grid item xs={12}>
-              <Button variant="contained" color="success" size='large' onClick={() => navigate('/shopping-cart')} endIcon={<InfoIcon />}>Mehr Informationen</Button>
-              <DataButton instrument={instrument}></DataButton>
+               <Button onClick={handleSubmit(handleSubmitClick)} variant="contained">test</Button>
               </Grid>       
             </Grid>
             
@@ -102,5 +142,6 @@ export default function ListItemComponent(props : any) {
    
   );
 }
+
 
 

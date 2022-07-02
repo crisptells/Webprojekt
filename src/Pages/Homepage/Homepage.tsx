@@ -38,8 +38,6 @@ function Homepage() {
         </Grid>
       </Grid>
 
-      <DataButton></DataButton>
-
     </Container>
   )
 }

@@ -46,7 +46,6 @@ export default function SignIn() {
 
     const handleSubmitClick = async () => {
         let redirectHome: boolean = false;
-        setIsLoading(true);
         let passwordToSend: string;
         //passwordToSend = passwordMd5(userPassword);
         const requestOptions = {
