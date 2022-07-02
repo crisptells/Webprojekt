@@ -14,7 +14,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import { useNavigate } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import { isCookieSet, setCookie } from '../CookieHandler';
+import { getCookie, isCookieSet, setCookie } from '../CookieHandler';
 import { Container } from '@mui/material';
 import '../Components/css/NavBar.css'
 
@@ -89,6 +89,7 @@ export default function PrimarySearchAppBar() {
     if(isCookieSet("userId")) {
       setCookie("userId", "null", 30);
       setAnchorEl(null);
+      console.log("Abgemeldet userID:"+getCookie("userId"));
     } else {
       console.log("Kein User angemeldet!");
     }
