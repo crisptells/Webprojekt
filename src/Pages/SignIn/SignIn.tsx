@@ -1,29 +1,22 @@
-import React, {useState} from "react";
+import {useState} from "react";
 
 import Grid from "@mui/material/Grid";
 import {
     Avatar,
     Box,
-    Checkbox,
     Container,
-    CssBaseline,
-    FormControlLabel, IconButton,
+    IconButton,
     TextField,
 } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
-import { createTheme } from "@mui/material/styles";
-import LockIcon from "@mui/icons-material/Lock";
-import {setCookie} from "../../CookieHandler";
+import {getCookie, setCookie} from "../../CookieHandler";
 import {useNavigate} from "react-router-dom";
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import {useForm, Controller} from "react-hook-form";
 import "./SignIn.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import md5 from "md5";
-
 
 export default function SignIn() {
 
@@ -47,13 +40,13 @@ export default function SignIn() {
     const handleSubmitClick = async () => {
         let redirectHome: boolean = false;
         let passwordToSend: string;
-        //passwordToSend = passwordMd5(userPassword);
+
         const requestOptions = {
             method: "PUT",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                userName: "Admin",
-                password: "passwort",
+                userName: userName,
+                password: userPassword,
             }),
         };
         const response = await fetch('http://localhost:8080/users/login', requestOptions);
@@ -63,6 +56,7 @@ export default function SignIn() {
             const data: any = await response.json();
             setError({isError: false, msg: "No error"});
             setCookie("userId", data.id, 7);
+            console.log("Angemeldet UserID: "+ getCookie("userId"))
             redirectHome = true;
         }
         setIsLoading(false);

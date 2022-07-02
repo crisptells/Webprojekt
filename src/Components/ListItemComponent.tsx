@@ -13,6 +13,7 @@ import Line from './Line';
 import { CategorySharp, Description } from '@mui/icons-material';
 import DataButton from './DataButton';
 import { useForm } from 'react-hook-form';
+import { UserIdentifier } from 'firebase-admin/lib/auth/identifier';
 
 
 function line(props: any) {
@@ -43,22 +44,20 @@ export default function ListItemComponent(props : any) {
     instrumentId
 
   } = props;
-  
-/**
-    "userId" : "c83a10db-004f-4d40-acae-a491dd7e986d",
-    "instrumentId" : "bc190294-c77e-462e-8887-258ac3570c2d" 
- */
 
   const handleSubmitClick = async () => {
-  
+    
+    const userIdString : String = userId;
+    const instrumentIdString : String = instrumentId;
+    
     console.log(userId);
     console.log(instrumentId);
     const requestOptions = {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
-          userId : {userId},
-          instrumentId : {instrumentId}
+          userId : userIdString,
+          instrumentId : instrumentIdString
         }),
     };
     const response = await fetch('http://localhost:8080/instruments/putInCart', requestOptions);
