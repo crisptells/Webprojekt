@@ -6,22 +6,15 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import { getCookie, isCookieSet, setCookie } from '../CookieHandler';
-import { Container } from '@mui/material';
-
-
+import { isCookieSet, setCookie } from '../CookieHandler';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -123,7 +116,7 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      
+
       <MenuItem onClick={handleMyProfile}>Profil</MenuItem>
       <MenuItem onClick={handleSignOut}>Abmelden</MenuItem>
       <MenuItem onClick={HandleMyInstruments}>Meine Instrumente</MenuItem>
@@ -163,30 +156,6 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-          <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-              //href='http://localhost:3000/shopping-cart'
-            >
-              <ShoppingCartIcon />
-            </IconButton>
-          <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-              //href='http://localhost:3000/your-orders'
-            >
-              <BookmarkBorderIcon />
-            </IconButton>
             <IconButton
               size="large"
               edge="end"
@@ -195,7 +164,6 @@ export default function PrimarySearchAppBar() {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
-              //href='http://localhost:3000/signin'
             >
               <AccountCircle />
             </IconButton>
