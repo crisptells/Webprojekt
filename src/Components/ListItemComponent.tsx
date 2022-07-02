@@ -8,6 +8,8 @@ import { Button, Container, Grid, IconButton, Stack } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import '../Components/css/ListItemComponent.css'
+import { color } from '@mui/system';
 
 function line(props: any) {
   const {
@@ -23,6 +25,7 @@ function line(props: any) {
 
 
 export default function ListItemComponent(props : any) {
+
 
   const {
     setValue,
@@ -98,7 +101,7 @@ export default function ListItemComponent(props : any) {
 
     <>
     
-    <ListItem alignItems="flex-start">
+    <ListItem alignItems="flex-start" sx={{ backgroundColor: "#f2f2f2" }}>
       <ListItemAvatar>
        <Avatar sx={{ width: 150, height: 150 }} alt={title} src={pictureLink} />
       </ListItemAvatar>
@@ -123,7 +126,7 @@ export default function ListItemComponent(props : any) {
               </Stack>
               
               <Grid item xs={12}>
-               <Button onClick={handleSubmit(handleSubmitClick)} variant="contained">test</Button>
+               <Button onClick={handleSubmit(handleSubmitClick)} color="inherit" variant="outlined">test</Button>
               </Grid>       
             </Grid>
             

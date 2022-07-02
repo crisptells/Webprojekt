@@ -186,8 +186,8 @@ export default function SignIn() {
                         <Button
                             type="submit"
                             fullWidth
-                            variant="contained"
-                            color="primary"
+                            variant="outlined"
+                            color="inherit"
                             sx={{
                                 borderColor: "rgba(5,10,15,255)",
                                 color: "white"
