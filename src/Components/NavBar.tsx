@@ -93,6 +93,20 @@ export default function PrimarySearchAppBar() {
     }
   };
 
+  const handleSignIn = () => {
+      navigate("/signIn")
+      setAnchorEl(null);
+  };
+
+  const handleCart = () => {
+    if(isCookieSet("userId")) {
+      navigate("/shopping-cart")
+      setAnchorEl(null);
+    } else {
+      console.log("Kein User angemeldet!");
+    }
+  };
+
   const HandleMyInstruments = () => {
     if(isCookieSet("userId")) {
       navigate("/myBookedInstruments");
@@ -122,11 +136,12 @@ export default function PrimarySearchAppBar() {
     {isCookieSet("userId") === true ? (
       <Container>
       <MenuItem onClick={handleMyProfile}>Profil</MenuItem>
-      <MenuItem onClick={handleSignOut}>Abmelden</MenuItem>
+      <MenuItem onClick={handleCart}>Warenkorb</MenuItem>
       <MenuItem onClick={HandleMyInstruments}>Meine Instrumente</MenuItem>
+      <MenuItem onClick={handleSignOut}>Abmelden</MenuItem>
       </Container>
     ) : (
-      <MenuItem onClick={HandleMyInstruments}>Anmelden</MenuItem>
+      <MenuItem onClick={handleSignIn}>Anmelden</MenuItem>
     )}
       
     </Menu>
