@@ -6,7 +6,8 @@ function TestCheckout() {
     const instrument = {
         name : "Instrument",
         category : "test",
-        instrumentId: "5f40da75-d06e-4a3f-8e8f-fd9fa5e99333"
+        instrumentId: "b57fb4fb-b817-4c36-b89d-5651ef6ecf76",
+        user: "565ad6d7-f3fc-4af9-92e8-21e5676eb764"
     }
 
   return (
@@ -18,13 +19,12 @@ function TestCheckout() {
 
       <BookInstrument
         instrument={instrument}
-        user="c3eb8c2b-461f-4c37-bf24-dc424459ad5d"
+        bookingDuration = "30"
       ></BookInstrument>
     </Container>
   
   )
   
 }
-  
 
 export default TestCheckout

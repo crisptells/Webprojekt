@@ -23,6 +23,7 @@ import Successful from './Pages/Successful/Successful'
 import Checkout from './Pages/Checkout/Checkout'
 import YourOrders from './Pages/YourOrders/YourOrders'
 import TestCheckout from './Pages/Test/TestCheckout'
+import MyBookedInstruments from './Pages/MyBookedInstruments/MyBookedInstruments'
 
 
 
@@ -54,6 +55,7 @@ function App() {
         <Route path='/your-orders' element={<YourOrders/>}/>
 
         <Route path='/test' element={<TestCheckout/>}/>
+        <Route path='/myBookedInstruments' element={<MyBookedInstruments/>}/>
 
       </Routes>
       <Footer/>

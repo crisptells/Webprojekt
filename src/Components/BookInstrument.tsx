@@ -6,15 +6,12 @@ import { useQuery } from "react-query";
 import { Link, useNavigate } from "react-router-dom";
 
 function ManageCheckout(props: any) {
-  const { instrument, available, user } = props;
+  const { instrument, bookingDuration } = props;
   const [error, setError] = useState({ isError: false, msg: "No Error" });
-  const [agree, setAgree] = useState(false);
   const [open] = useState(true);
   const {
-    setValue,
     handleSubmit,
     formState: { errors },
-    control,
   } = useForm();
 
 const bookInstrument = async () => {
@@ -29,10 +26,10 @@ const bookInstrument = async () => {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      userId: user,
+      userId: instrument.user,
       instrumentId : instrument.instrumentId,
       bookingDate : today.toISOString().substring(0, 10),
-      bookingDuration : 30
+      bookingDuration : bookingDuration
     }),
   };
 
@@ -46,24 +43,11 @@ const bookInstrument = async () => {
       }
       
       if (success) {
-        available(false);
         navigate("/success");
       }
     };
 
   const navigate = useNavigate();
-  
-
-  const handleCloseCheckout = () => {
-    available(false);
-  };
-
-  const finishTransaction = () => {
-    available(false);
-    navigate("/success");
-  };
-
-  const handleClose = useState(false);
 
   return (
     <Dialog

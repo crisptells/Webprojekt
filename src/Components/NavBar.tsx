@@ -18,6 +18,8 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import { getCookie, isCookieSet, setCookie } from '../CookieHandler';
+import { Container } from '@mui/material';
 
 
 
@@ -68,7 +70,6 @@ export default function PrimarySearchAppBar() {
     React.useState<null | HTMLElement>(null);
 
   const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const navigate = useNavigate();
 
@@ -76,17 +77,33 @@ export default function PrimarySearchAppBar() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
   const handleMenuClose = () => {
     setAnchorEl(null);
-    handleMobileMenuClose();
   };
 
-  const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-    setMobileMoreAnchorEl(event.currentTarget);
+  const handleMyProfile = () => {
+    if(isCookieSet("userId")) {
+      navigate("/myBookedInstruments");
+    } else {
+      navigate("/signIn");
+    }
+    
+  };
+
+  const handleSignOut = () => {
+    if(isCookieSet("userId")) {
+      setCookie("userId", "null", 30);
+    } else {
+      console.log("Kein User angemeldet!");
+    }
+  };
+
+  const HandleMyInstruments = () => {
+    if(isCookieSet("userId")) {
+      navigate("/myBookedInstruments");
+    } else {
+      navigate("/signIn");
+    }
   };
 
   const menuId = 'primary-search-account-menu';
@@ -107,58 +124,10 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       
-    </Menu>
-  );
-
-  const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem> 
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
+      <MenuItem onClick={handleMyProfile}>Profil</MenuItem>
+      <MenuItem onClick={handleSignOut}>Abmelden</MenuItem>
+      <MenuItem onClick={HandleMyInstruments}>Meine Instrumente</MenuItem>
+      
     </Menu>
   );
 
@@ -200,9 +169,9 @@ export default function PrimarySearchAppBar() {
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-              //onClick={handleProfileMenuOpen}
+              onClick={handleProfileMenuOpen}
               color="inherit"
-              href='http://localhost:3000/shopping-cart'
+              //href='http://localhost:3000/shopping-cart'
             >
               <ShoppingCartIcon />
             </IconButton>
@@ -212,9 +181,9 @@ export default function PrimarySearchAppBar() {
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-              //onClick={handleProfileMenuOpen}
+              onClick={handleProfileMenuOpen}
               color="inherit"
-              href='http://localhost:3000/your-orders'
+              //href='http://localhost:3000/your-orders'
             >
               <BookmarkBorderIcon />
             </IconButton>
@@ -224,28 +193,15 @@ export default function PrimarySearchAppBar() {
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-              //onClick={handleProfileMenuOpen}
+              onClick={handleProfileMenuOpen}
               color="inherit"
-              href='http://localhost:3000/signin'
+              //href='http://localhost:3000/signin'
             >
               <AccountCircle />
             </IconButton>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
       {renderMenu}
     </Box>
   );

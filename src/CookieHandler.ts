@@ -20,6 +20,7 @@ export const getCookie = (cookieName: string): string => {
     return "null";
 }
 
+
 export const isCookieSet = (cookieName: string): boolean => {
     let cookie = getCookie(cookieName);
     if(cookie !== "null" ) {
