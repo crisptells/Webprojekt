@@ -33,6 +33,7 @@ function ShoppingCard() {
     console.log("Für User: " + getCookie("userId"));
       response = await fetch(`http://localhost:8080/instruments/${instrumentId}`);
       data =await response.json();
+      console.log(data);
       return(data);
   };
 
