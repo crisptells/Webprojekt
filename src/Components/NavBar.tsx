@@ -16,6 +16,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import { isCookieSet, setCookie } from '../CookieHandler';
 import { Container } from '@mui/material';
+import '../Components/css/NavBar.css'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -149,7 +150,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" color="primary">
+      <AppBar position="fixed" color="default">
         <Toolbar>
           <IconButton
             size="large"

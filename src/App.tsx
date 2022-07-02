@@ -24,6 +24,9 @@ import Checkout from './Pages/Checkout/Checkout'
 import YourOrders from './Pages/YourOrders/YourOrders'
 import TestCheckout from './Pages/Test/TestCheckout'
 import MyBookedInstruments from './Pages/MyBookedInstruments/MyBookedInstruments'
+import Hilfe from './Pages/Hilfe/Hilfe'
+import Impressum from './Pages/Impressum/Impressum'
+import Kontakt from './Pages/Kontakt/Kontakt'
 
 
 
@@ -56,6 +59,10 @@ function App() {
 
         <Route path='/test' element={<TestCheckout/>}/>
         <Route path='/myBookedInstruments' element={<MyBookedInstruments/>}/>
+        <Route path='/hilfe' element={<Hilfe/>}/>
+        <Route path='/impressum' element={<Impressum/>}/>
+        <Route path='/kontakt' element={<Kontakt/>}/>
+        
 
       </Routes>
       <Footer/>
