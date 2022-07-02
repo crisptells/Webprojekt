@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import ShoppingCardTable from '../../Components/ShoppingCardTable';
 import { DatePicker } from '@mui/x-date-pickers';
+import { useLocation } from 'react-router-dom';
 
 
 function ShoppingCard() {
@@ -19,8 +20,10 @@ function ShoppingCard() {
 
   const {data: instrumentsData}:any = useQuery("instruments", () => 
   fetch('http://localhost:8080/instruments/getAllType/RENT').then((res)=>res.json())
-  
 );
+
+const location = useLocation();
+const data = location.state;
 
   return (
 
@@ -40,7 +43,7 @@ function ShoppingCard() {
       <Grid container columnSpacing={2}>
 
         <Grid item xs={8}>
-         <ShoppingCardTable instrumentsData={instrumentsData}></ShoppingCardTable>
+         <ShoppingCardTable instrumentsData={data}></ShoppingCardTable>
         </Grid>
   
    

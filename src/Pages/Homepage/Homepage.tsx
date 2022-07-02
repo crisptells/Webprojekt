@@ -4,6 +4,7 @@ import { Button, Container, Grid, Table } from '@mui/material'
 import { useQuery } from "react-query"
 import ComplexButton from '../../Components/ComplexButton'
 import InstrumentsTable from '../../Components/InstrumentsTable'
+import DataButton from '../../Components/DataButton'
 
 
 function Homepage() {
@@ -36,6 +37,8 @@ function Homepage() {
           </a>
         </Grid>
       </Grid>
+
+      <DataButton></DataButton>
 
     </Container>
   )

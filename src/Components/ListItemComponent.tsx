@@ -41,6 +41,14 @@ export default function ListItemComponent(props : any) {
 
     } = props;
 
+    const instrument = {
+      title: { title },
+      pictureLink: { pictureLink },
+      description: {description},
+      price: {price},
+      category: {category}
+    }
+
     const render = () => {
       var text = description;
         return (
@@ -82,7 +90,8 @@ export default function ListItemComponent(props : any) {
               </Stack>
               
               <Grid item xs={12}>
-                <DataButton></DataButton>
+              <Button variant="contained" color="success" size='large' onClick={() => navigate('/shopping-cart')} endIcon={<InfoIcon />}>Mehr Informationen</Button>
+              <DataButton instrument={instrument}></DataButton>
               </Grid>       
             </Grid>
             
