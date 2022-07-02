@@ -85,7 +85,7 @@ export default function SimpleDialogDemo() {
         
       </Typography>
       
-      <Button variant="contained" onClick={handleClickOpen} startIcon={<FilterAltIcon />}>
+      <Button color="inherit" variant="outlined" onClick={handleClickOpen} startIcon={<FilterAltIcon />}>
         Filtern
       </Button>
       <SimpleDialog

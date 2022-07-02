@@ -34,7 +34,7 @@ function ShoppingCard() {
       }}>
       
       <Stack spacing={2} direction="row" justifyContent="flex-start">
-        <Button onClick={() => navigate(-1)} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+        <Button onClick={() => navigate(-1)} color="inherit" variant="outlined" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
       </Stack>      
 
       <Grid container columnSpacing={2}>
@@ -78,7 +78,7 @@ function ShoppingCard() {
           </Card>
           <p></p>
           <Stack direction="column">
-            <Button variant="contained" color="success" size='large' endIcon={<ShoppingBagIcon />} href="http://localhost:3000/checkout">Zur Kasse</Button>
+            <Button color="inherit" variant="outlined" size='large' endIcon={<ShoppingBagIcon />} onClick={() => navigate('/checkout')}>Zur Kasse</Button>
           </Stack>
 
 

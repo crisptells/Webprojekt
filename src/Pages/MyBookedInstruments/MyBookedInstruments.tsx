@@ -46,7 +46,7 @@ export default function MyBookedInstruments() {
       <Grid container spacing={2}>
           <Grid item xs={6}>
             <Stack spacing={2} direction="row" justifyContent={"flex-start"}>
-             <Button href={'http://localhost:3000'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+             <Button onClick={() => navigate(-1)} color="inherit" variant="outlined" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
             </Stack>
           </Grid>
 

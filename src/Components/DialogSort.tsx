@@ -79,7 +79,7 @@ export default function SimpleDialogDemo() {
         
       </Typography>
       
-      <Button variant="contained" onClick={handleClickOpen} startIcon={<FilterListIcon />}>
+      <Button color="inherit" variant="outlined" onClick={handleClickOpen} startIcon={<FilterListIcon />}>
         Sortieren
       </Button>
       <SimpleDialog

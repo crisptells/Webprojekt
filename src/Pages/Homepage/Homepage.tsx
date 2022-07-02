@@ -4,7 +4,6 @@ import { Button, Container, Grid, Stack, Table } from '@mui/material'
 import { useQuery } from "react-query"
 import ComplexButton from '../../Components/ComplexButton'
 import InstrumentsTable from '../../Components/InstrumentsTable'
-import DataButton from '../../Components/DataButton'
 import '../../Pages/Homepage/Homepage.css'
 
 function Homepage() {

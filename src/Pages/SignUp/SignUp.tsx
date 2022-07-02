@@ -332,9 +332,9 @@ function SignUp() {
                         disabled={!agree}
                         type="submit"
                         fullWidth
-                        variant="contained"
+                        variant="outlined"
                         onClick={handleSubmitClick}
-                        color="primary"
+                        color="inherit"
                         sx={{ mt: 3, mb: 2 }}
                         >
                         Registrieren

@@ -25,7 +25,7 @@ function Checkout() {
      <Grid container spacing={2}>
           <Grid item xs={12}>
             <Stack spacing={2} direction="row" justifyContent={"flex-start"}>
-             <Button onClick={() => navigate(-1)} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+             <Button onClick={() => navigate(-1)} color="inherit" variant="outlined" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
             </Stack>
           </Grid>
 
@@ -41,7 +41,7 @@ function Checkout() {
           </Grid>
           <Grid item xs={12}>
           <Stack spacing={2} direction="row" justifyContent="flex-start">
-              <Button href="http://localhost:3000/successful" startIcon={<PaymentIcon/>} variant="contained">Bezahlen</Button>
+              <Button onClick={() => navigate('/successful')} color="inherit" variant="outlined" startIcon={<PaymentIcon/>} >Bezahlen</Button>
           </Stack>
           </Grid>
       </Grid>
