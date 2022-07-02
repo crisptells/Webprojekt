@@ -61,20 +61,13 @@ export default function PrimarySearchAppBar() {
     setAnchorEl(null);
   };
 
-  const handleMyProfile = () => {
-    if(isCookieSet("userId")) {
-      navigate("/myBookedInstruments");
-    } else {
-      navigate("/signIn");
-    }
-    
-  };
-
   const handleSignOut = () => {
     if(isCookieSet("userId")) {
-      setCookie("userId", "null", 30);
-      setAnchorEl(null);
       console.log("Abgemeldet userID:"+getCookie("userId"));
+      setCookie("userId", "null", 30);
+      navigate("/")
+      setAnchorEl(null);
+      
     } else {
       console.log("Kein User angemeldet!");
     }
@@ -92,14 +85,6 @@ export default function PrimarySearchAppBar() {
       setAnchorEl(null);
     } else {
       console.log("Kein User angemeldet!");
-    }
-  };
-
-  const HandleMyInstruments = () => {
-    if(isCookieSet("userId")) {
-      navigate("/myBookedInstruments");
-    } else {
-      navigate("/signIn");
     }
   };
 
@@ -122,10 +107,8 @@ export default function PrimarySearchAppBar() {
     >
 
     {isCookieSet("userId") === true ? (
-      <Container>
-      <MenuItem onClick={handleMyProfile}>Profil</MenuItem>
+      <Container>  
       <MenuItem onClick={handleCart}>Warenkorb</MenuItem>
-      <MenuItem onClick={HandleMyInstruments}>Meine Instrumente</MenuItem>
       <MenuItem onClick={handleSignOut}>Abmelden</MenuItem>
       </Container>
     ) : (
@@ -146,7 +129,7 @@ export default function PrimarySearchAppBar() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <MenuIcon onClick={() => navigate('/')}/>
           </IconButton>
           <Typography
             variant="h6"

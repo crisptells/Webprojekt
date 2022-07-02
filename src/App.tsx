@@ -53,7 +53,7 @@ function App() {
         <Route path='/signin' element={<SignIn/>}/>
         <Route path='/signup' element={<SignUp/>}/>
 
-        <Route path='/successful' element={<Successful/>}/>
+        <Route path='/sucess' element={<Successful/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/your-orders' element={<YourOrders/>}/>
 

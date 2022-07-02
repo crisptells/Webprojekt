@@ -3,7 +3,7 @@ import ListItemComponent from "./ListItemComponent";
 import ShoppingCardItem from "./ShoppingCardItem";
 
 function ShoppingCardTable(props: any){
-    const{instrumentsData} = props;
+    const{instrumentsData} = props;    
 
     return(
 
@@ -14,15 +14,13 @@ function ShoppingCardTable(props: any){
                 {instrumentsData?.map((entry : any) => (
              <Grid item key={entry.instrumentId.title} xs={12} sm={12} md={12} lg={12} className="instrument">
                 <Card>
-                 <ShoppingCardItem title={entry.instrumentId.name} description={entry.instrumentId.description} category={entry.instrumentId.category} price={entry.instrumentId.price} pictureLink={entry.instrumentId.pictureLink}/>
+                 <ShoppingCardItem id= {entry.instrumentId.id}title={entry.instrumentId.name} description={entry.instrumentId.description} category={entry.instrumentId.category} price={entry.instrumentId.price} pictureLink={entry.instrumentId.pictureLink}/>
                 </Card>
             </Grid>
                 ))}
             </Grid>
 
         </Card>
-
-        
     
     )
 }

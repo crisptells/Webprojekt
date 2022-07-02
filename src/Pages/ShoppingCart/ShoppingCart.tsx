@@ -25,6 +25,15 @@ function ShoppingCard() {
 );
   console.log(getCookie("userId"));
   console.log(CartData);
+  var gesPrice: any = 0;
+
+  const calcPrice = async() => {
+    for (let item of CartData) {
+      gesPrice = gesPrice + item.instrumentId.price;
+      console.log(gesPrice);
+    }
+  };
+ calcPrice();
 
   return (
     
@@ -54,23 +63,12 @@ function ShoppingCard() {
                 </Grid>
                 <Grid item xs={6}>
                 <Typography sx={{ fontSize: 15 }} color="text.primary">
-                  Gitarre
-                </Typography>
-                </Grid>
-                <Grid item xs={6}>
-                <Typography sx={{ fontSize: 15 }} color="text.primary">
-                  € 150
-                </Typography>
-                </Grid>
-
-                <Grid item xs={6}>
-                <Typography sx={{ fontSize: 15 }} color="text.primary">
                   Gesamt 
                 </Typography>
                 </Grid>
                 <Grid item xs={6}>
                 <Typography sx={{ fontSize: 15 }} color="text.primary">
-                  € 150
+                  {gesPrice} €
                 </Typography>
                 </Grid>
               </Grid>
