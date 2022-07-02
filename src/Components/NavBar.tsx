@@ -15,6 +15,7 @@ import { useNavigate } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import { isCookieSet, setCookie } from '../CookieHandler';
+import { Container } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -86,6 +87,7 @@ export default function PrimarySearchAppBar() {
   const handleSignOut = () => {
     if(isCookieSet("userId")) {
       setCookie("userId", "null", 30);
+      setAnchorEl(null);
     } else {
       console.log("Kein User angemeldet!");
     }
@@ -117,9 +119,15 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
 
+    {isCookieSet("userId") === true ? (
+      <Container>
       <MenuItem onClick={handleMyProfile}>Profil</MenuItem>
       <MenuItem onClick={handleSignOut}>Abmelden</MenuItem>
       <MenuItem onClick={HandleMyInstruments}>Meine Instrumente</MenuItem>
+      </Container>
+    ) : (
+      <MenuItem onClick={HandleMyInstruments}>Anmelden</MenuItem>
+    )}
       
     </Menu>
   );
