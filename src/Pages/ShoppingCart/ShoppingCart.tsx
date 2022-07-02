@@ -8,7 +8,7 @@ import Instrument from '../../Components/Instrument';
 import ListItemComponent from '../../Components/ListItemComponent';
 import InstrumentsTable from '../../Components/InstrumentsTable';
 import { useNavigate } from 'react-router-dom';
-import { useQuery } from 'react-query';
+import { isError, useQuery } from 'react-query';
 import ShoppingCardTable from '../../Components/ShoppingCardTable';
 import { DatePicker } from '@mui/x-date-pickers';
 import { useLocation } from 'react-router-dom';
@@ -20,28 +20,11 @@ import { LtePlusMobiledataSharp } from '@mui/icons-material';
 function ShoppingCard() {
 
   const navigate = useNavigate();
-  const instrumentsData = null;
-  let myArray: any[] = [];
   const {data: CartData}:any = useQuery("instruments", () => 
   fetch(`http://localhost:8080/instruments/getCart/${getCookie("userId")}`).then((res)=>res.json())
 );
-
-  const fetchInstrument = async (instrumentId : any) => {
-    var response : any = null;
-    var data : any = null;
-    console.log(instrumentId);
-    console.log("Für User: " + getCookie("userId"));
-      response = await fetch(`http://localhost:8080/instruments/${instrumentId}`);
-      data =await response.json();
-      console.log(data);
-      return(data);
-  };
-
-  const loop = () => {
-    {CartData?.map((entry : any) => (
-      myArray.push(fetchInstrument(entry.id))
-    ))}
-  }
+  console.log(getCookie("userId"));
+  console.log(CartData);
 
   return (
     
@@ -57,10 +40,7 @@ function ShoppingCard() {
       <Grid container columnSpacing={2}>
 
         <Grid item xs={8}>
-        {CartData?.map((entry : any) => (
-          myArray.push(fetchInstrument(entry.id))
-         ))}
-          <ShoppingCardTable instrumentsData={myArray}></ShoppingCardTable>
+          <ShoppingCardTable instrumentsData={CartData}></ShoppingCardTable>
         </Grid>
 
         <Grid item xs={4}>
