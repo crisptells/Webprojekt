@@ -34,7 +34,6 @@ export default function ShoppingCardItem(props : any) {
       category
 
     } = props;
-      
 
   return (
     <>

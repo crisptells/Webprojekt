@@ -88,6 +88,7 @@ export default function PrimarySearchAppBar() {
   const handleCart = () => {
     if(isCookieSet("userId")) {
       navigate("/shopping-cart")
+      window.location.reload();
       setAnchorEl(null);
     } else {
       console.log("Kein User angemeldet!");

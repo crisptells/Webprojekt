@@ -3,7 +3,7 @@ import ListItemComponent from "./ListItemComponent";
 import ShoppingCardItem from "./ShoppingCardItem";
 
 function ShoppingCardTable(props: any){
-    const{instrumentsData, filter, isMobile} = props;
+    const{instrumentsData} = props;
 
     return(
 
@@ -12,13 +12,12 @@ function ShoppingCardTable(props: any){
             <Grid container rowSpacing={5}  className="instruments">
 
                 {instrumentsData?.map((entry : any) => (
-             <Grid item key={entry.title} xs={12} sm={12} md={12} lg={12} className="instrument">
+             <Grid item key={entry.instrumentId.title} xs={12} sm={12} md={12} lg={12} className="instrument">
                 <Card>
-                 <ShoppingCardItem title={entry.name} description={entry.description} category={entry.category} price={entry.price} pictureLink={entry.pictureLink}/>
+                 <ShoppingCardItem title={entry.instrumentId.name} description={entry.instrumentId.description} category={entry.instrumentId.category} price={entry.instrumentId.price} pictureLink={entry.instrumentId.pictureLink}/>
                 </Card>
             </Grid>
                 ))}
-
             </Grid>
 
         </Card>
