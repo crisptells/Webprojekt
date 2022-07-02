@@ -13,41 +13,54 @@ import ShoppingCardTable from '../../Components/ShoppingCardTable';
 import { DatePicker } from '@mui/x-date-pickers';
 import { useLocation } from 'react-router-dom';
 import ShoppingCardItem from '../../Components/ShoppingCardItem';
+import { getCookie } from '../../CookieHandler';
+import { LtePlusMobiledataSharp } from '@mui/icons-material';
 
 
 function ShoppingCard() {
 
   const navigate = useNavigate();
-
-  const {data: instrumentsData}:any = useQuery("instruments", () => 
-  fetch('http://localhost:8080/instruments').then((res)=>res.json())
+  const instrumentsData = null;
+  let myArray: any[] = [];
+  const {data: CartData}:any = useQuery("instruments", () => 
+  fetch(`http://localhost:8080/instruments/getCart/${getCookie("userId")}`).then((res)=>res.json())
 );
 
-const location = useLocation();
-const data : any = location.state;
+  const fetchInstrument = async (instrumentId : any) => {
+    var response : any = null;
+    var data : any = null;
+    console.log(instrumentId);
+    console.log("Für User: " + getCookie("userId"));
+      response = await fetch(`http://localhost:8080/instruments/${instrumentId}`);
+      data =await response.json();
+      return(data);
+  };
+
+  const loop = () => {
+    {CartData?.map((entry : any) => (
+      myArray.push(fetchInstrument(entry.id))
+    ))}
+  }
 
   return (
-
+    
     <Container
       sx={{
-        padding: "100px"
+      padding: "100px"
       }}>
-
+      
       <Stack spacing={2} direction="row" justifyContent="flex-start">
         <Button onClick={() => navigate(-1)} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
-      </Stack>
-    
-      <p> </p>
-
-      
+      </Stack>      
 
       <Grid container columnSpacing={2}>
 
         <Grid item xs={8}>
-          <ShoppingCardTable instrumentsData={instrumentsData}></ShoppingCardTable>
+        {CartData?.map((entry : any) => (
+          myArray.push(fetchInstrument(entry.id))
+         ))}
+          <ShoppingCardTable instrumentsData={myArray}></ShoppingCardTable>
         </Grid>
-  
-   
 
         <Grid item xs={4}>
           <Card >

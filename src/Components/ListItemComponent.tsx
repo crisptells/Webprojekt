@@ -1,5 +1,3 @@
-import InfoIcon from '@mui/icons-material/Info';
-import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
 import ListItemText from '@mui/material/ListItemText';
@@ -9,12 +7,7 @@ import Typography from '@mui/material/Typography';
 import { Button, Container, Grid, IconButton, Stack } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Line from './Line';
-import { CategorySharp, Description } from '@mui/icons-material';
-import DataButton from './DataButton';
 import { useForm } from 'react-hook-form';
-import { UserIdentifier } from 'firebase-admin/lib/auth/identifier';
-
 
 function line(props: any) {
   const {
@@ -49,7 +42,7 @@ export default function ListItemComponent(props : any) {
     
     const userIdString : String = userId;
     const instrumentIdString : String = instrumentId;
-    
+
     console.log(userId);
     console.log(instrumentId);
     const requestOptions = {
