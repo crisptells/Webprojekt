@@ -45,6 +45,7 @@ export default function AlignItemsList() {
             <Stack spacing={2} direction="row" justifyContent={"flex-start"}>
             <Button onClick={() => navigate('/')} color="inherit" variant="outlined" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
             </Stack>
+            <p> </p>
           </Grid>
 
           <Grid item xs={6}>

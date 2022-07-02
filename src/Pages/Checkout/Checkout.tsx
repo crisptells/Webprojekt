@@ -37,12 +37,31 @@ function Checkout() {
 
 
   const bookCart = async() => {
+    var uName;
     for (let item of CartData) {
       handleSubmitClick(item.userId.id, item.instrumentId.id, null, 30);
+      uName = item.userId.id;
     }
+    clearCart(uName);
     navigate("/sucess");
   };
- 
+
+  const clearCart = async (userId:String) => {
+    console.log(userId);
+    const requestOptions = {
+        method: "PUT",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ }),
+    };
+    const response = await fetch(`http://localhost:8080/instruments/return/${userId}`, requestOptions);
+    if (!response.ok) {
+        setError({isError: true, msg: `Fehler: ${response.statusText}`});
+    } else if (response.ok) {
+        const data: any = await response.json();
+        setError({isError: false, msg: "No error"});
+    }
+};
+
   const handleSubmitClick = async (userId:String, instrumentId:String, bookingDate : any, bookingDuration: number) => {
 
       const requestOptions = {
@@ -61,8 +80,6 @@ function Checkout() {
       } else if (response.ok) {
           const data: any = await response.json();
           setError({isError: false, msg: "No error"});
-          setCookie("userId", data.id, 7);
-          console.log("Angemeldet UserID: "+ getCookie("userId"))
       }
   };
 

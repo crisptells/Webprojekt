@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import '../Components/css/ListItemComponent.css'
 import { color } from '@mui/system';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 function line(props: any) {
   const {
@@ -126,7 +127,7 @@ export default function ListItemComponent(props : any) {
               </Stack>
               
               <Grid item xs={12}>
-               <Button onClick={handleSubmit(handleSubmitClick)} color="inherit" variant="outlined">test</Button>
+               <Button onClick={handleSubmit(handleSubmitClick)} color="inherit" variant="outlined" startIcon={<AddShoppingCartIcon />}>In den Warenkorb</Button>
               </Grid>       
             </Grid>
             
