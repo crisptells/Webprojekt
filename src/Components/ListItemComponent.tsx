@@ -11,6 +11,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Line from './Line';
 import { CategorySharp, Description } from '@mui/icons-material';
+import DataButton from './DataButton';
 
 
 function line(props: any) {
@@ -81,7 +82,7 @@ export default function ListItemComponent(props : any) {
               </Stack>
               
               <Grid item xs={12}>
-                <Button variant="contained" color="success" size='large' onClick={() => navigate('/shopping-cart')} endIcon={<InfoIcon />}>Mehr Inforamtionen</Button>
+                <DataButton></DataButton>
               </Grid>       
             </Grid>
             

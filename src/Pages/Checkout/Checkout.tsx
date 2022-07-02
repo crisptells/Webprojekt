@@ -5,10 +5,13 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import RadioButtonsGroup from "../../Components/RadioButtonGroup";
 import RadioCheckout from "../../Components/RadioCheckout";
 import PaymentIcon from '@mui/icons-material/Payment';
+import { useNavigate } from "react-router-dom";
 
 
 
 function Checkout() {
+
+  const navigate = useNavigate();
 
   return (
 
@@ -22,7 +25,7 @@ function Checkout() {
      <Grid container spacing={2}>
           <Grid item xs={12}>
             <Stack spacing={2} direction="row" justifyContent={"flex-start"}>
-             <Button href={'http://localhost:3000'} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+             <Button onClick={() => navigate(-1)} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
             </Stack>
           </Grid>
 
