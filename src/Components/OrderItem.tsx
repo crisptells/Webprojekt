@@ -26,7 +26,7 @@ function line(props: any) {
 }
 
 
-export default function ShoppingCardItem(props : any) {
+export default function OrderItem(props : any) {
 
     const navigate = useNavigate();
 
@@ -73,7 +73,7 @@ export default function ShoppingCardItem(props : any) {
             {render()} 
           </Typography>
           <Stack direction="row" justifyContent="flex-end">
-            <h3>{price}€</h3>            
+            <h3>geliehen bis: 28.07.2022</h3>            
           </Stack>
         </React.Fragment>} />
     </ListItem></>

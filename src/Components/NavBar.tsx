@@ -16,6 +16,9 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -191,7 +194,30 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-           
+          <IconButton
+              size="large"
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              //onClick={handleProfileMenuOpen}
+              color="inherit"
+              href='http://localhost:3000/shopping-cart'
+            >
+              <ShoppingCartIcon />
+            </IconButton>
+          <IconButton
+              size="large"
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              //onClick={handleProfileMenuOpen}
+              color="inherit"
+              href='http://localhost:3000/your-orders'
+            >
+              <BookmarkBorderIcon />
+            </IconButton>
             <IconButton
               size="large"
               edge="end"

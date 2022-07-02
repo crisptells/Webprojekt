@@ -1,5 +1,4 @@
 import { Button, Card, CardContent, Container, Grid, Typography, Avatar, List, Divider, IconButton, ListItem, ListItemAvatar, ListItemText, Stack } from '@mui/material'
-import './ProductDetails.css';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Instrument from '../../Components/Instrument';
@@ -9,9 +8,10 @@ import { useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import ShoppingCardTable from '../../Components/ShoppingCardTable';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import OrderTable from '../../Components/OrderTable';
 
 
-function ProductInfo() {
+function YourOrders() {
 
   const navigate = useNavigate();
 
@@ -31,16 +31,16 @@ function ProductInfo() {
       }}>
 
       <Stack spacing={2} direction="row" justifyContent="flex-start">
-        <Button onClick={() => navigate(-1)} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+        <Button onClick={() => navigate('/')} variant="contained" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
       </Stack>
 
-      <Stack spacing={2} direction="row" justifyContent="flex-start">
-        
-      </Stack>
+      <br/>
+      <h4>Ihre Bestellungen:</h4>
+      <br/>
 
-      <Stack spacing={2} direction="row" justifyContent="flex-end">
-        <Button variant="contained" startIcon={<ShoppingCartIcon />}>In den Warenkorb</Button>
-      </Stack>
+      <Grid item xs={8}>
+         <OrderTable instrumentsData={instrumentsData}></OrderTable>
+        </Grid>
       
 
       
@@ -50,4 +50,4 @@ function ProductInfo() {
   
 }
   
-export default ProductInfo
+export default YourOrders

@@ -18,6 +18,9 @@ import AdminAllBookedInstruments from './Pages/AdminAllBookedInstruments/AdminAl
 import AdminAddInstrument from './Pages/AdminAddInstrument/AdminAddInstrument'
 import SignIn from './Pages/SignIn/SignIn'
 import SignUp from './Pages/SignUp/SignUp'
+import Successful from './Pages/Successful/Successful'
+import Checkout from './Pages/Checkout/Checkout'
+import YourOrders from './Pages/YourOrders/YourOrders'
 
 
 
@@ -41,6 +44,9 @@ function App() {
         <Route path='/admin/AddInstrument' element={<AdminAddInstrument/>}/>
         <Route path='/signin' element={<SignIn/>}/>
         <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/successful' element={<Successful/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/your-orders' element={<YourOrders/>}/>
       </Routes>
       <Footer/>
     </Container>

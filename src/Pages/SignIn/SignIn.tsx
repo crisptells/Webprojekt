@@ -186,9 +186,8 @@ export default function SignIn() {
                         {error.isError && (
                             <small style={{color: "red"}}>
                                 Ein Fehler ist aufgetreten. Bitte überprüfen Sie ihren
-                                eingegebenen Benutzernamen und das Passwort. Bei technischen
-                                Problemen wenden Sie sich bitte an den Admin dieser Website.
-                                {error.msg}
+                                eingegebenen Benutzernamen und das Passwort.
+                                
                             </small>
                         )}
                         <br/>

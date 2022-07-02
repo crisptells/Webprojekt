@@ -35,9 +35,6 @@ function Homepage() {
           <ComplexButton buttonText="SCHLAGZEUGE" buttonImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_s7-PLlsIlnAcaMovOausyKkmDHVv1S9AA&usqp=CAU'></ComplexButton>
           </a>
         </Grid>
-        <Grid item xs={4}>
-          <Button href='http://localhost:3000/product-details' variant='contained'>product details - "warenkorb"</Button>
-        </Grid>
       </Grid>
 
     </Container>
