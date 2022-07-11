@@ -43,7 +43,7 @@ function ShoppingCard() {
       }}>
       
       <Stack spacing={2} direction="row" justifyContent="flex-start">
-        <Button onClick={() => navigate(-1)} color="inherit" variant="outlined" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
+        <Button onClick={() => navigate("/")} color="inherit" variant="outlined" startIcon={<ArrowBackIosNewIcon />}>Zurück</Button>
       </Stack>      
 
       <Grid container columnSpacing={2}>
