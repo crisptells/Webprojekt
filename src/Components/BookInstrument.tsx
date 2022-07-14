@@ -17,6 +17,7 @@ function ManageCheckout(props: any) {
 const bookInstrument = async () => {
   
   const today : Date = new Date();
+  //Test
   const duration : number = 30;
   let returnDate : Date = new Date();
   returnDate.setDate(returnDate.getDate() + 30);
